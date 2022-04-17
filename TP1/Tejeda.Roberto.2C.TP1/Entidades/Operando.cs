@@ -4,34 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MiCalculadora
+namespace Entidades
 {
-    static class Calculadora
-    {
-        /// <summary>
-        /// Validar y realizar la operación pedida entre ambos números
-        /// </summary>
-        /// <param name="num1">Primer numero ingresado</param>
-        /// <param name="num2">Segundo numero ingresado</param>
-        /// <param name="operador">Opaerando</param>
-        /// <returns>Resultado </returns>
-        public static double Operar(Operando num1,Operando num2, char operador)
-        {
-            double resultado=0;
-           
-            return resultado;
-        }
-        /// <summary>
-        /// validar que el operadorrecibido sea +, -, / o *. Caso contrario 
-        /// </summary>
-        /// <param name="operador"></param>
-        /// <returns>Si se trata de un Operador valido lo retorna y de no ser asi retornará +</returns>
-        private static char ValidarOperador(char operador)
-        {
-            return operador;
-        }
-    }
-    public class Operando
+    internal class Operando
     {
         private double numero;
         /// <summary>
@@ -39,22 +14,22 @@ namespace MiCalculadora
         /// </summary>
         public Operando()
         {
-            this.numero = 0;    
+            this.numero = 0;
         }
         /// <summary>
         /// recarga constructor double
         /// </summary>
         /// <param name="numero"></param>
-        public Operando(double numero) 
+        public Operando(double numero)
         {
-            this.numero=numero;
+            this.numero = numero;
         }
         /// <summary>
         /// recarga constructo strin
         /// </summary>
         /// <param name="strNumero"></param>
         public Operando(string strNumero)
-        {    
+        {
             double numero;
             double.TryParse(strNumero, out numero);
             this.numero = numero;
@@ -63,17 +38,18 @@ namespace MiCalculadora
         /// Propiedad Numero asigna un valor al atributo número, previa validación.
         /// En este lugar será el único en todo el código que llame al método ValidarOperando.
         /// </summary>
-        public string Numero
-        {            
-            set 
+        public string NumeroProp
+        {
+            set
             {
-                if(value is not null && value.Length>0)
+                if (value is not null && value.Length > 0)
                 {
                     double aux;
                     double.TryParse(value, out aux);
-                    this.numero = aux; 
+                    this.numero = aux;
                 }
             }
+
         }
         /// <summary>
         /// Comprobar que el valor recibido sea numérico y lo retorna en formato double.
@@ -83,9 +59,9 @@ namespace MiCalculadora
         /// <returns></returns>
         private double ValidarOperando(string strNumero)
         {
-            double operando=0;
+            double operando = 0;
 
-            if (strNumero is not null && strNumero.Length>0 && double.TryParse(strNumero, out operando))
+            if (strNumero is not null && strNumero.Length > 0 && double.TryParse(strNumero, out operando))
             {
                 return operando;
             }
@@ -98,17 +74,17 @@ namespace MiCalculadora
         /// <returns>True si es binario</returns>
         private bool EsBinario(string binario)
         {
-            bool retorno=false;
-            if(binario.Length>0&& binario is not null)
+            bool retorno = false;
+            if (binario.Length > 0 && binario is not null)
             {
-                for (int i = 0; i <binario.Length; i++)
+                for (int i = 0; i < binario.Length; i++)
                 {
-                    if(binario[i] != '1'|| binario[i] != '0')
+                    if (binario[i] != '1' || binario[i] != '0')
                     {
-                       return  retorno;
+                        return retorno;
                     }
                 }
-                retorno=true;
+                retorno = true;
             }
             return retorno;
         }
@@ -124,8 +100,8 @@ namespace MiCalculadora
         /// <returns></returns>
         public string BinarioDecimal(string binario)
         {
-            string retorno= "Valorinválido";
-
+            string retorno = "Valorinválido";
+            ///FALTA
             return retorno;
         }
         /// <summary>
@@ -137,17 +113,20 @@ namespace MiCalculadora
         public string DecimalBinario(double numero)
         {
             string retorno = "Valor invalido";
-            
+            ///FALTA
             return retorno;
         }
         public string DecimalBinario(string numero)
         {
             string retorno = "Valor invalido";
-
+            ///FALTA
             return retorno;
         }
+        /*Los operadores realizarán las operaciones correspondientes entre dos números. Si se tratara
+         * de una división por 0, retornará double.MinValue
+        */
 
-        public static double operator -(Operando n1,Operando n2)
+        public static double operator -(Operando n1, Operando n2)
         {
             return n1.numero - n2.numero;
         }
