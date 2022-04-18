@@ -7,15 +7,15 @@ namespace Entidades
         /// <summary>
         /// Validar y realizar la operación pedida entre ambos números
         /// </summary>
-        /// <param name="num1">Primer numero ingresado</param>
-        /// <param name="num2">Segundo numero ingresado</param>
+        /// <param name="num1">Objeto 1</param>
+        /// <param name="num2">Objeto 2</param>
         /// <param name="operador">Opaerando</param>
-        /// <returns>Resultado </returns>
+        /// <returns>Resultado</returns>
         ///       
         public static double Operar(Operando num1, Operando num2, char operador)
         {
             double resultado = 0;
-            if (num1 != null && num2 !=null)
+            if (num1 != null && num2 !=null && !Char.IsLetterOrDigit(operador))
             {
                 if (ValidarOperador(operador) == '+')
                 {
