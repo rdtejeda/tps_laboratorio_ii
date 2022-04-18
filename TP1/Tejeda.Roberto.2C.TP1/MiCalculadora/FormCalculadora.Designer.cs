@@ -123,11 +123,12 @@
             // 
             this.lblResultado.AutoSize = true;
             this.lblResultado.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblResultado.Location = new System.Drawing.Point(256, 9);
+            this.lblResultado.Location = new System.Drawing.Point(241, 9);
             this.lblResultado.Name = "lblResultado";
             this.lblResultado.Size = new System.Drawing.Size(100, 25);
             this.lblResultado.TabIndex = 8;
             this.lblResultado.Text = "Resultado";
+            this.lblResultado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lstOperaciones
             // 

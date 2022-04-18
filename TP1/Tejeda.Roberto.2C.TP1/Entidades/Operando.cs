@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    internal class Operando
+    public class Operando
     {
         private double numero;
         /// <summary>
@@ -30,78 +30,146 @@ namespace Entidades
         /// <param name="strNumero"></param>
         public Operando(string strNumero)
         {
-            double numero;
-            double.TryParse(strNumero, out numero);
-            this.numero = numero;
+            this.Numero = strNumero;
         }
         /// <summary>
-        /// Propiedad Numero asigna un valor al atributo número, previa validación.
+        /// Propiedad asigna un valor al atributo número, previa validación.
         /// En este lugar será el único en todo el código que llame al método ValidarOperando.
         /// </summary>
-        public string NumeroProp
+        public string Numero
         {
             set
             {
                 if (value is not null && value.Length > 0)
                 {
-                    double aux;
-                    double.TryParse(value, out aux);
-                    this.numero = aux;
+                    this.numero = ValidarOperando(value);
                 }
             }
-
         }
         /// <summary>
-        /// Comprobar que el valor recibido sea numérico y lo retorna en formato double.
-        /// Caso contrario, retornará 0.
+        /// Comprobar que el valor recibido sea numérico
         /// </summary>
         /// <param name="strNumero">valor a verificar y retotnar como double</param>
-        /// <returns></returns>
+        /// <returns> Retorna operando en formato double, Caso contrario, retornará 0.</returns>
         private double ValidarOperando(string strNumero)
         {
             double operando = 0;
-
-            if (strNumero is not null && strNumero.Length > 0 && double.TryParse(strNumero, out operando))
+            if (double.TryParse(strNumero, out operando))
             {
                 return operando;
             }
             return operando;
         }
         /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="n1"></param>
+        /// <param name="n2"></param>
+        /// <returns></returns>
+        public static double operator -(Operando n1, Operando n2)
+        {
+            if (n1 is not null && n2 is not null)
+            {
+                return n1.numero - n2.numero;
+            }
+            return double.MinValue;
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="n1"></param>
+        /// <param name="n2"></param>
+        /// <returns></returns>
+        public static double operator +(Operando n1, Operando n2)
+        {
+            if (n1 is not null && n2 is not null)
+            {
+                return n1.numero + n2.numero;
+            }
+            return double.MinValue;
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="n1"></param>
+        /// <param name="n2"></param>
+        /// <returns></returns>
+        public static double operator *(Operando n1, Operando n2)
+        {
+            if (n1 is not null && n2 is not null)
+            {
+                return n1.numero * n2.numero;
+            }
+            return double.MinValue;
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="n1"></param>
+        /// <param name="n2"></param>
+        /// <returns></returns>
+        public static double operator /(Operando n1, Operando n2)
+        {
+            if (n1 is not null && n2 is not null && n2.numero != 0)
+            {
+                return n1.numero / n2.numero;
+            }
+            return double.MinValue;
+        }
+        /// <summary>
         /// Validar que la cadena de caracteres esté compuesta SOLAMENTE por caracteres '0' o '1'.
         /// </summary>
         /// <param name="binario">Cadena a validar</param>
         /// <returns>True si es binario</returns>
-        private bool EsBinario(string binario)
+        private static bool EsBinario(string binario)
         {
-            bool retorno = false;
+            bool retorno = true;
             if (binario.Length > 0 && binario is not null)
             {
                 for (int i = 0; i < binario.Length; i++)
                 {
-                    if (binario[i] != '1' || binario[i] != '0')
+                    if (!(binario[i] == '1' || binario[i] == '0'))
                     {
-                        return retorno;
+                       retorno=false;
+                        break;
                     }
                 }
-                retorno = true;
             }
             return retorno;
         }
-        /*
-         * Los métodos BinarioDecimal y DecimalBinario convertirán el resultado,
-         * trabajarán con enteros positivos, quedándose para esto con el valor absoluto y entero del double recibido:
-         */
         /// <summary>
         /// BinarioDecimal validará que se trate de un binario y luego convertirá esenúmero binario a decimal,
         /// en caso de ser posible.Caso contrario retornará "Valorinválido".
         /// </summary>
         /// <param name="binario"></param>
         /// <returns></returns>
-        public string BinarioDecimal(string binario)
+        public static string BinarioDecimal(string binario)
         {
-            string retorno = "Valorinválido";
-            ///FALTA
+            double auxiliarDecimal = 0;
+            string retorno = string.Empty;
+            if(EsBinario(binario))
+            {
+                if(binario=="0")
+                {
+                    retorno = "0";
+                }else
+                {
+                    char[] auxiliarArray = binario.ToCharArray();
+                    Array.Reverse(auxiliarArray);
+                    for (int i = 0; i < auxiliarArray.Length; i++)
+                    {
+                        if (auxiliarArray[i] == '1')
+                        {
+                            auxiliarDecimal = auxiliarDecimal + (double)Math.Pow(2, i);
+                            retorno=auxiliarDecimal.ToString();
+                        }
+                    }
+                }
+            }
+            else
+            {
+                retorno = "Valor Inválido";
+            }
             return retorno;
         }
         /// <summary>
@@ -110,37 +178,38 @@ namespace Entidades
         /// </summary>
         /// <param name="numero"></param>
         /// <returns></returns>
-        public string DecimalBinario(double numero)
+        public static string DecimalBinario(double numero)
         {
-            string retorno = "Valor invalido";
-            ///FALTA
-            return retorno;
+            int auxiliar;
+            string binario = string.Empty;
+            if ((int)numero == 0)
+            {
+                binario = "0";
+            }else
+            {
+                while ((int)numero > 0)
+                {
+                    auxiliar = (int)numero % 2;
+                    numero = (int)numero / 2;
+                    binario = auxiliar.ToString() + binario;
+                }
+            }
+            return binario;
         }
-        public string DecimalBinario(string numero)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="numero"></param>
+        /// <returns></returns>
+        public static string DecimalBinario(string numero)
         {
-            string retorno = "Valor invalido";
-            ///FALTA
-            return retorno;
+            int auxiliar;
+            string binario = string.Empty;
+            if (int.TryParse(numero, out auxiliar))
+            {
+                binario = DecimalBinario(auxiliar);
+            }
+            return binario;
         }
-        /*Los operadores realizarán las operaciones correspondientes entre dos números. Si se tratara
-         * de una división por 0, retornará double.MinValue
-        */
-
-        public static double operator -(Operando n1, Operando n2)
-        {
-            return n1.numero - n2.numero;
-        }
-        public static double operator +(Operando n1, Operando n2)
-        {
-            return n1.numero + n2.numero;
-        }
-        public static double operator *(Operando n1, Operando n2)
-        {
-            return n1.numero * n2.numero;
-        }
-        public static double operator /(Operando n1, Operando n2)
-        {
-            return n1.numero / n2.numero;
-        }
-    }
+    }   
 }

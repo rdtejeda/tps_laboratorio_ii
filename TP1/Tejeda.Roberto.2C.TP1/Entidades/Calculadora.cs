@@ -11,20 +11,33 @@ namespace Entidades
         /// <param name="num2">Segundo numero ingresado</param>
         /// <param name="operador">Opaerando</param>
         /// <returns>Resultado </returns>
-        ///
-        
-        static double Operar(Operando num1, Operando num2, char operador)
+        ///       
+        public static double Operar(Operando num1, Operando num2, char operador)
         {
             double resultado = 0;
-            if (ValidarOperador(operador) == '+')
+            if (num1 != null && num2 !=null)
             {
-                resultado = num1 + num2;
+                if (ValidarOperador(operador) == '+')
+                {
+                    resultado= num1 + num2;
+                }
+                if (ValidarOperador(operador) == '-')
+                {
+                    resultado = num1 - num2;
+                }
+                if (ValidarOperador(operador) == '*')
+                {
+                    resultado = num1 * num2;
+                }
+                if (ValidarOperador(operador) == '/')
+                {
+                    resultado = num1 / num2;
+                }
             }
             return resultado;
-        }
-        
+        }      
         /// <summary>
-        /// validar que el operadorrecibido sea +, -, / o *. Caso contrario
+        /// validar que el operadorrecibido sea +, -, / o *
         /// </summary>
         /// <param name="operador"></param>
         /// <returns>Si se trata de un Operador valido lo retorna y de no ser asi retornará +</returns>
@@ -33,20 +46,20 @@ namespace Entidades
             char retorno = '+';
             if (Equals(operador, '+'))
             {
-                retorno = operador;
+                 retorno = operador;
             }
             if (Equals(operador, '-'))
             {
-                retorno = operador;
+                 retorno = operador;
             }
             if (Equals(operador, '*'))
             {
-                retorno = operador;
+                 retorno = operador;
             }
             if (Equals(operador, '/'))
             {
-                retorno = operador;
-            }
+                 retorno = operador;
+            }     
             return retorno;
         }
     }
