@@ -22,7 +22,7 @@ namespace MiCalculadora
         {
             txtNumero1.Clear();
             txtNumero2.Clear();
-            lblResultado.Text = " ";
+            lblResultado.Text = "";
             lstOperaciones.Items.Clear();
         }
         private void btnLimpiar_Click(object sender, EventArgs e)
@@ -70,17 +70,29 @@ namespace MiCalculadora
                 binario = Operando.DecimalBinario(auxiliaEntero);
                 lblResultado.Text = binario;
                 lstOperaciones.Items.Add($"Convertir a Binario {auxiliaEntero} = {binario}");
+            }
+            else
+            {
+                MessageBox.Show("No hay datos para realizar la conversión", "Cuidado", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }            
         }
         private void btnConvertirADecimal_Click(object sender, EventArgs e)
         {
 
-            string auxiliar = lblResultado.Text;
-            string respuesta = Operando.BinarioDecimal(lblResultado.Text);
-            lblResultado.Text= respuesta;
-            lstOperaciones.Items.Add($"Converir a Decimal {auxiliar} = {respuesta}");
-            
-           
+            if (!String.IsNullOrEmpty(lblResultado.Text))
+            {
+                string auxiliar = lblResultado.Text;
+                string respuesta = Operando.BinarioDecimal(lblResultado.Text);
+                lblResultado.Text= respuesta;
+                lstOperaciones.Items.Add($"Converir a Decimal {auxiliar} = {respuesta}");
+            }
+            else
+            {
+                MessageBox.Show("No hay datos para realizar la conversión", "Cuidado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+
         }
 
         private static double Operar(string numero1, string numero2, string operador)
