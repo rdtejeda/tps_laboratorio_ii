@@ -60,10 +60,19 @@ namespace Entidades
         private double ValidarOperando(string strNumero)
         {
             double operando = 0;
+           
+            for (int i = 0; i < strNumero.Length; i++)
+            {
+                if (strNumero[i]=='.')
+                {
+                    return operando;
+                }                
+            }
             if (double.TryParse(strNumero, out operando) && Double.IsNormal(operando))
             {
                 return operando;
             }
+            
             return operando;
         }
         /// <summary>

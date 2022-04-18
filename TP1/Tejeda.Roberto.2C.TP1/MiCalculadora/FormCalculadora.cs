@@ -14,6 +14,9 @@ namespace MiCalculadora
 {
     public partial class FormCalculadora : Form
     {
+        Operando operandoUno = new Operando();
+        Operando operandoDos = new Operando();
+        
         /// <summary>
         /// Inicia Objeto Form
         /// </summary>
@@ -139,11 +142,11 @@ namespace MiCalculadora
         /// <param name="numero2">Numero 2</param>
         /// <param name="operador">Operador</param>
         /// <returns>Resultado</returns>
-        private static double Operar(string numero1, string numero2, string operador)
+        private double Operar(string numero1, string numero2, string operador)
         {
             double resultado;
-            Operando operandoUno = new Operando();
-            Operando operandoDos = new Operando();
+            ///Operando operandoUno = new Operando();
+           /// Operando operandoDos = new Operando();
             
             operandoUno.Numero = numero1;
             operandoDos.Numero = numero2;
