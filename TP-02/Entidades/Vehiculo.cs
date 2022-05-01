@@ -46,7 +46,7 @@ namespace Entidades
         /// <summary>
         /// ReadOnly: Retornará el tamaño
         /// </summary>
-        public abstract ETamanio Tamanio { get;}
+        protected abstract ETamanio Tamanio { get; }
         /// <summary>
         /// Metodo Mostrar
         /// </summary>
@@ -64,7 +64,7 @@ namespace Entidades
             StringBuilder sb = new StringBuilder();
 
             sb.AppendLine($"CHASIS: {p.chasis}");
-            sb.AppendLine($"MAARCA : {p.marca.ToString()}");
+            sb.AppendLine($"MARCA : {p.marca.ToString()}");
             sb.AppendLine($"COLOR : {p.color.ToString()}");
             sb.AppendLine("---------------------");
             return sb.ToString();

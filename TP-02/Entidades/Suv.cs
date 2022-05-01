@@ -21,11 +21,11 @@ namespace Entidades
         /// <summary>
         /// Sobrescrituras Propiedad Tamanio - SUV son 'Grande'
         /// </summary>
-        public override ETamanio Tamanio //r protected override short Tamanio
+        protected override ETamanio Tamanio
         {
             get
             {
-                return ETamanio.Grande; //return 0;
+                return ETamanio.Grande;
             }
         }
         /// <summary>

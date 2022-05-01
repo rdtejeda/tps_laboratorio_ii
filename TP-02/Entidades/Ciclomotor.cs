@@ -21,7 +21,7 @@ namespace Entidades
         /// <summary>
         /// Sobreescritura Propiedad Tamanio - Ciclomotor son 'Chico'
         /// </summary>
-        public override ETamanio Tamanio //r protected short Tamanio
+        protected override ETamanio Tamanio
         {
             get
             {
@@ -42,7 +42,7 @@ namespace Entidades
             sb.AppendLine();
             sb.AppendLine("---------------------");
 
-            return sb.ToString(); //r return sb;
+            return sb.ToString();
         }
     }
 }

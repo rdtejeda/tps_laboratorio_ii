@@ -44,11 +44,11 @@ namespace Entidades
         /// <summary>
         /// Sobrescritura Propiedad Tamanio - Sedan son 'Mediano'
         /// </summary>
-        public override ETamanio Tamanio //r protected override short Tamanio
+        protected override ETamanio Tamanio
         {
             get
             {
-                return ETamanio.Mediano; //r return this.Tamanio;
+                return ETamanio.Mediano;
             }
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Entidades
 
             sb.AppendLine("SEDAN");
             sb.AppendLine(((string)this));
-            sb.AppendFormat($"TAMAÑO : {Tamanio.ToString()} : TIPO {this.tipo}\n");
+            sb.AppendFormat($"TAMAÑO : {Tamanio.ToString()} TIPO : {this.tipo}\n");
             sb.AppendLine();
             sb.AppendLine("---------------------");
 
