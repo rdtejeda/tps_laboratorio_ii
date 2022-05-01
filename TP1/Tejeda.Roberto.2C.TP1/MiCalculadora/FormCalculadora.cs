@@ -85,7 +85,25 @@ namespace MiCalculadora
                 {
                     double resultado = Operar(txtNumero1.Text, txtNumero2.Text, cmbOperator.Text);
                     lblResultado.Text = resultado.ToString();
-                    lstOperaciones.Items.Add($"{txtNumero1.Text} {cmbOperator.Text} {txtNumero2.Text} = {resultado.ToString()}");
+                    string txtNumeroUno = txtNumero1.Text;
+                    for (int i = 0; i < txtNumero1.Text.Length; i++)
+                    {
+                        if (txtNumero1.Text[i] == '.')
+                        {
+                            txtNumeroUno ="0";
+                            break;
+                        }
+                    }
+                    string txtNumeroDos = txtNumero2.Text;
+                    for (int i = 0; i < txtNumero2.Text.Length; i++)
+                    {
+                    if (txtNumero2.Text[i] == '.')
+                        {
+                            txtNumeroDos = "0";
+                            break;
+                        }
+                    }
+                lstOperaciones.Items.Add($"{txtNumeroUno} {cmbOperator.Text} {txtNumeroDos} = {resultado.ToString()}");
                 }else
                 {
                     MessageBox.Show("Debe selecciona Operandos y Operador validos","Cuidado", MessageBoxButtons.OK, MessageBoxIcon.Error);
