@@ -41,31 +41,35 @@ namespace TP_02_2018
             taller += a4;
 
             Console.WriteLine(taller.ToString());
-            MostararConsola();
+            MostararColaDeMensaje();
            
             // Quito 2 items y muestro
             taller -= c1;
             taller -= new Ciclomotor(Vehiculo.EMarca.Honda, "ASD913", ConsoleColor.Red);
 
             Console.WriteLine(taller.ToString());
-            MostararConsola();
+            MostararColaDeMensaje();
            
             // Vuelvo a agregar c2
             taller += c2;
                                     
             // Muestro solo Moto
-            Console.WriteLine(Taller.Listar(taller, Taller.ETipo.Ciclomotor)); //r  Console.WriteLine(Taller.Listar(taller, Taller.ETipo.Ciclomotor));
-            MostararConsola();
+            Console.WriteLine(Taller.Listar(taller, Taller.ETipo.Ciclomotor));
+            MostararColaDeMensaje();
             
             // Muestro solo Automovil
             Console.WriteLine(Taller.Listar(taller, Taller.ETipo.Sedan));
-            MostararConsola();
+            MostararColaDeMensaje();
           
             // Muestro solo Camioneta
             Console.WriteLine(Taller.Listar(taller, Taller.ETipo.SUV));
-            MostararConsola();
-                      
-            void MostararConsola()
+            MostararColaDeMensaje();
+
+            /// <summary>
+            /// Muestra la cola del Mensaje
+            /// </summary>
+            /// <returns>Void</returns>
+            void MostararColaDeMensaje()
             {
                 Console.WriteLine("<-----------PRESIONE UNA TECLA PARA CONTINUAR----------->");
                 Console.ReadKey();

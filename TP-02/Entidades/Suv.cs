@@ -6,16 +6,20 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class Suv : Vehiculo //r agregu vehiculo
+    public class Suv : Vehiculo
     {
-        public Suv(EMarca marca, string chasis, ConsoleColor color) //R: base(chasis, marca, color)
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="marca"></param>
+        /// <param name="chasis"></param>
+        /// <param name="color"></param>
+        public Suv(EMarca marca, string chasis, ConsoleColor color) :base(chasis,marca,color)
         {
-            this.marca = marca;
-            this.chasis = chasis;       
-            this.color = color;
+            
         }
         /// <summary>
-        /// SUV son 'Grande'
+        /// Sobrescrituras Propiedad Tamanio - SUV son 'Grande'
         /// </summary>
         public override ETamanio Tamanio //r protected override short Tamanio
         {
@@ -24,21 +28,18 @@ namespace Entidades
                 return ETamanio.Grande; //return 0;
             }
         }
-
+        /// <summary>
+        /// Sobreescritrusa Mostara para Suv
+        /// </summary>
+        /// <returns></returns>
         public override sealed string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
 
             sb.AppendLine("SUV");
-            sb.AppendFormat(((string)this));
-           // sb.AppendLine($"CHASIS: {this.chasis}"); 
-           // sb.AppendLine($"MARCA : {this.marca.ToString()}");
-          //  sb.AppendLine($"COLOR : {this.color.ToString()}"); 
-             //R sb.AppendLine(base);
-            //r sb.AppendLine("TAMAÑO : {0}", this.Tamanio);
-            //r sb.AppendLine("");
-          //  sb.AppendLine("---------------------");
+            sb.AppendLine(((string)this));
             sb.AppendLine($"TAMAÑO : {Tamanio.ToString()}");
+            sb.AppendLine();
             sb.AppendLine("---------------------");
 
             return sb.ToString();

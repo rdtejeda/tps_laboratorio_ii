@@ -9,52 +9,66 @@ namespace Entidades
     /// <summary>
     /// La clase Vehiculo no deberá permitir que se instancien elementos de este tipo.
     /// </summary>
-    public abstract class Vehiculo //r public sealed class Vehiculo
+    public abstract class Vehiculo
     {
+        /// <summary>
+        /// Tipo de valor EMarca
+        /// </summary>
         public enum EMarca
         {
             Chevrolet, Ford, Renault, Toyota, BMW, Honda, HarleyDavidson
         }
+        /// <summary>
+        /// Tipo de valor ETamanio
+        /// </summary>
         public enum ETamanio
         {
             Chico, Mediano, Grande
         }
-        protected EMarca marca; //r le agrhge public a los tres
+        /// <summary>
+        /// Atributos
+        /// </summary>
+        protected EMarca marca;
         protected string chasis;
         protected ConsoleColor color;
-
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="chasis"></param>
+        /// <param name="marca"></param>
+        /// <param name="color"></param>
+        protected Vehiculo(string chasis, EMarca marca, ConsoleColor color)
+        {
+            this.marca = marca;
+            this.chasis = chasis;
+            this.color = color;
+        }
         /// <summary>
         /// ReadOnly: Retornará el tamaño
         /// </summary>
-        public abstract ETamanio Tamanio { get;} //R abstract ETamanio Tamanio { get; set; }
-                                                 //Funciona  public abstract ETamanio Tamanio { get;} 
-
-
+        public abstract ETamanio Tamanio { get;}
         /// <summary>
-        /// Publica todos los datos del Vehiculo.
+        /// Metodo Mostrar
         /// </summary>
         /// <returns></returns>
-        public virtual string Mostrar() //r sealed string Mostrar() FUNCIONA public virtual string Mostrar();
+        public virtual string Mostrar()
         {
-            return ((string)this); //this.ToString(); //r return this;
-        }
-        
+            return ((string)this);
+        }        
         /// <summary> //r lo agregue yo
-        /// 
+        /// Recarga explicita de string
         /// </summary>
         /// <param name="p"></param>
         public static explicit operator string(Vehiculo p)
         {
             StringBuilder sb = new StringBuilder();
 
-            sb.AppendLine($"CHASIS: {p.chasis}"); //r sb.AppendLine("CHASIS: {0}\r\n", p.chasis);
-            sb.AppendLine($"MAARCA : {p.marca.ToString()}"); //r sb.AppendLine("MARCA : {0}\r\n", p.marca.ToString());
-            sb.AppendLine($"COLOR : {p.color.ToString()}"); //r sb.AppendLine("COLOR : {0}\r\n", p.color.ToString());
+            sb.AppendLine($"CHASIS: {p.chasis}");
+            sb.AppendLine($"MAARCA : {p.marca.ToString()}");
+            sb.AppendLine($"COLOR : {p.color.ToString()}");
             sb.AppendLine("---------------------");
-
-            return sb.ToString(); //r  return sb;
-        }        
-
+            return sb.ToString();
+        }     
         /// <summary>
         /// Dos vehiculos son iguales si comparten el mismo chasis
         /// </summary>

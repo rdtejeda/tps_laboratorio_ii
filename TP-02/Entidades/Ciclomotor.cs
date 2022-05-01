@@ -8,15 +8,18 @@ namespace Entidades
 {
     public class Ciclomotor : Vehiculo
     {
-        public Ciclomotor(EMarca marca, string chasis, ConsoleColor color)
-        {
-            this.marca = marca;
-            this.chasis = chasis;
-            this.color = color;
-        }
-
         /// <summary>
-        /// Ciclomotor son 'Chico'
+        /// Constructor
+        /// </summary>
+        /// <param name="marca"></param>
+        /// <param name="chasis"></param>
+        /// <param name="color"></param>
+        public Ciclomotor(EMarca marca, string chasis, ConsoleColor color) : base(chasis,marca,color)
+        {
+           
+        }
+        /// <summary>
+        /// Sobreescritura Propiedad Tamanio - Ciclomotor son 'Chico'
         /// </summary>
         public override ETamanio Tamanio //r protected short Tamanio
         {
@@ -25,19 +28,19 @@ namespace Entidades
                 return ETamanio.Chico;
             }
         }
-        public override string Mostrar() //r private override sealed string Mostrar()
+        /// <summary>
+        /// Sobrescritura Mostrar para Ciclomotor
+        /// </summary>
+        /// <returns></returns>
+        public override string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
 
             sb.AppendLine("CICLOMOTOR");
-            sb.AppendFormat(((string)this));
-           // sb.AppendLine($"CHASIS: {this.chasis}");        //r sb.AppendLine(this.Mostrar());
-           // sb.AppendLine($"MARCA : {this.marca.ToString()}"); //r sb.AppendLine("TAMAÑO : {0}", this.Tamanio);
-           // sb.AppendLine($"COLOR : {this.color.ToString()}");                      //r  sb.AppendLine("");
-            //sb.AppendLine("---------------------");
+            sb.AppendLine(((string)this));
             sb.AppendLine($"TAMAÑO : {Tamanio.ToString()}");
+            sb.AppendLine();
             sb.AppendLine("---------------------");
-
 
             return sb.ToString(); //r return sb;
         }

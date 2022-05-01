@@ -10,19 +10,27 @@ namespace Entidades
 {
     public class Sedan : Vehiculo //R class Sedan : Vehiculo
     {
+        /// <summary>
+        /// Tipo de valor ETipo
+        /// </summary>
         public enum ETipo
         {
             CuatroPuertas, CincoPuertas 
         }
+        /// <summary>
+        /// Atributo
+        /// </summary>
         ETipo tipo;
-        public Sedan(EMarca marca, string chasis, ConsoleColor color)
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="marca"></param>
+        /// <param name="chasis"></param>
+        /// <param name="color"></param>
+        public Sedan(EMarca marca, string chasis, ConsoleColor color) : base(chasis,marca,color)
         {
-            this.marca = marca;
-            this.chasis = chasis;   
-            this.color = color;
+           this.tipo = ETipo.CuatroPuertas;
         }
-
-
         /// <summary>
         /// Por defecto, TIPO será CuatroPuertas
         /// </summary>
@@ -33,9 +41,8 @@ namespace Entidades
         {
             this.tipo = tipo;
         }
-
         /// <summary>
-        /// Sedan son 'Mediano'
+        /// Sobrescritura Propiedad Tamanio - Sedan son 'Mediano'
         /// </summary>
         public override ETamanio Tamanio //r protected override short Tamanio
         {
@@ -44,19 +51,18 @@ namespace Entidades
                 return ETamanio.Mediano; //r return this.Tamanio;
             }
         }
-
+        /// <summary>
+        /// Sobreescritura Mostara Ciclomotor
+        /// </summary>
+        /// <returns></returns>
         public override sealed string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
 
             sb.AppendLine("SEDAN");
-            sb.AppendFormat(((string)this));
-           // sb.AppendLine($"CHASIS: {this.chasis}"); //rsb.AppendLine(this);
-            //sb.AppendLine($"MARCA : {this.marca.ToString()}"); //rsb.AppendLine("TAMAÑO : {0}", this.Tamanio);
-           // sb.AppendLine($"COLOR : {this.color.ToString()}"); //rsb.AppendLine("TIPO : " + this.tipo);
-           // sb.AppendLine($"TIPO : {this.tipo.ToString()}");
-           // sb.AppendLine("---------------------");
+            sb.AppendLine(((string)this));
             sb.AppendFormat($"TAMAÑO : {Tamanio.ToString()} : TIPO {this.tipo}\n");
+            sb.AppendLine();
             sb.AppendLine("---------------------");
 
             return sb.ToString();

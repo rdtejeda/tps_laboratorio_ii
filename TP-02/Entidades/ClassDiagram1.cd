@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
   <Class Name="Entidades.Ciclomotor">
-    <Position X="8" Y="2.5" Width="4.75" />
+    <Position X="4" Y="7.75" Width="4" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAQAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Ciclomotor.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Entidades.Taller">
-    <Position X="0.5" Y="0.5" Width="3.5" />
+    <Position X="0.5" Y="6.75" Width="3.25" />
     <Compartments>
       <Compartment Name="Nested Types" Collapsed="false" />
     </Compartments>
@@ -25,7 +25,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Entidades.Vehiculo">
-    <Position X="4.25" Y="0.5" Width="3.25" />
+    <Position X="4" Y="0.5" Width="4" />
     <Compartments>
       <Compartment Name="Nested Types" Collapsed="false" />
     </Compartments>
@@ -47,12 +47,12 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Entidades.Sedan">
-    <Position X="8.25" Y="4.5" Width="3.25" />
+    <Position X="0.5" Y="2.5" Width="3.25" />
     <Compartments>
       <Compartment Name="Nested Types" Collapsed="false" />
     </Compartments>
     <NestedTypes>
-      <Enum Name="Entidades.Sedan.ETipo" Collapsed="true">
+      <Enum Name="Entidades.Sedan.ETipo">
         <TypeIdentifier>
           <NewMemberFileName>Sedan.cs</NewMemberFileName>
         </TypeIdentifier>
@@ -64,7 +64,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Entidades.Suv">
-    <Position X="8" Y="0.5" Width="3.25" />
+    <Position X="0.5" Y="0.5" Width="3.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAQAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Suv.cs</FileName>
