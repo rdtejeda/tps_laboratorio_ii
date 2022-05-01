@@ -8,7 +8,7 @@ using System.Drawing;
 
 namespace Entidades
 {
-    public class Sedan : Vehiculo //R class Sedan : Vehiculo
+    public class Sedan : Vehiculo
     {
         /// <summary>
         /// Tipo de valor ETipo

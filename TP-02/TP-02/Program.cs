@@ -17,7 +17,7 @@ namespace TP_02_2018
             
             // Nombre del alumno
             Console.Title = "Tejeda Roberto";
-            //
+            
             Taller taller = new Taller(6);
             
             Vehiculo c1 = new Ciclomotor(Vehiculo.EMarca.BMW, "ASD012", ConsoleColor.Black);
