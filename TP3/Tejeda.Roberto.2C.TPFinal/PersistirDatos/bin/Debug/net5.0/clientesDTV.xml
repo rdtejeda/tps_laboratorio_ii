@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfClienteDTV xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ClienteDTV>
+    <Dni>12345678</Dni>
+    <Nombre>Pepe</Nombre>
+    <Apellido>Rodriguez</Apellido>
+    <Id>1</Id>
+    <Direccion>Perex 234</Direccion>
+  </ClienteDTV>
+  <ClienteDTV>
+    <Dni>12345678</Dni>
+    <Nombre>asddfhj</Nombre>
+    <Apellido>Peruez</Apellido>
+    <Id>2</Id>
+    <Direccion>CXaacupoe 234</Direccion>
+  </ClienteDTV>
+  <ClienteDTV>
+    <Dni>12345678</Dni>
+    <Nombre>aSD</Nombre>
+    <Apellido>ASDasd</Apellido>
+    <Id>1</Id>
+    <Direccion>Perex 234</Direccion>
+  </ClienteDTV>
+</ArrayOfClienteDTV>
