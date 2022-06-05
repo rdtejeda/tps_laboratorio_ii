@@ -50,7 +50,7 @@ namespace PersistirDatos
                 }
                 else
                 {
-                    throw new ArchivoException("La extension es invalida");
+                    throw new ArchivoException("La extension del archivo es invalida");
                 }
             }
             catch (Exception)
@@ -60,6 +60,7 @@ namespace PersistirDatos
         }
         public T Leer(string path, string nombreArchivo)
         {
+           // T retorno=null;
             try
             {
                 if (Path.GetExtension(nombreArchivo) == ".json")
@@ -81,13 +82,14 @@ namespace PersistirDatos
                 }
                 else
                 {
-                    throw new ArchivoException("Extension invalida");
+                    throw new ArchivoException("La extension del archivo es invalida");
                 }
             }
             catch (Exception)
             {
                 throw;
             }
+           // return retorno;
         }
     }
 }

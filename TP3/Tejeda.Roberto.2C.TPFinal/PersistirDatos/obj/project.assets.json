@@ -2,16 +2,6 @@
   "version": 3,
   "targets": {
     "net5.0": {
-      "Entidades/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v5.0",
-        "compile": {
-          "bin/placeholder/Entidades.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Entidades.dll": {}
-        }
-      },
       "Excepciones/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -25,11 +15,6 @@
     }
   },
   "libraries": {
-    "Entidades/1.0.0": {
-      "type": "project",
-      "path": "../Entidades/Entidades.csproj",
-      "msbuildProject": "../Entidades/Entidades.csproj"
-    },
     "Excepciones/1.0.0": {
       "type": "project",
       "path": "../Excepciones/Excepciones.csproj",
@@ -38,7 +23,6 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "Entidades >= 1.0.0",
       "Excepciones >= 1.0.0"
     ]
   },
@@ -74,9 +58,6 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\Usuario\\Downloads\\UTNFrA\\Repositorios_Clonados_Compratido\\tps_laboratorio_ii\\TP3\\Tejeda.Roberto.2C.TPFinal\\Entidades\\Entidades.csproj": {
-              "projectPath": "C:\\Users\\Usuario\\Downloads\\UTNFrA\\Repositorios_Clonados_Compratido\\tps_laboratorio_ii\\TP3\\Tejeda.Roberto.2C.TPFinal\\Entidades\\Entidades.csproj"
-            },
             "C:\\Users\\Usuario\\Downloads\\UTNFrA\\Repositorios_Clonados_Compratido\\tps_laboratorio_ii\\TP3\\Tejeda.Roberto.2C.TPFinal\\Excepciones\\Excepciones.csproj": {
               "projectPath": "C:\\Users\\Usuario\\Downloads\\UTNFrA\\Repositorios_Clonados_Compratido\\tps_laboratorio_ii\\TP3\\Tejeda.Roberto.2C.TPFinal\\Excepciones\\Excepciones.csproj"
             }

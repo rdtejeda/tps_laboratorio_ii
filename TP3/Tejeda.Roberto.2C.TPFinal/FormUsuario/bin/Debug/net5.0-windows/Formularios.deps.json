@@ -9,6 +9,7 @@
       "Formularios/1.0.0": {
         "dependencies": {
           "Entidades": "1.0.0",
+          "Excepciones": "1.0.0",
           "PersistirDatos": "1.0.0"
         },
         "runtime": {
@@ -16,6 +17,10 @@
         }
       },
       "Entidades/1.0.0": {
+        "dependencies": {
+          "Excepciones": "1.0.0",
+          "PersistirDatos": "1.0.0"
+        },
         "runtime": {
           "Entidades.dll": {}
         }
@@ -27,7 +32,6 @@
       },
       "PersistirDatos/1.0.0": {
         "dependencies": {
-          "Entidades": "1.0.0",
           "Excepciones": "1.0.0"
         },
         "runtime": {

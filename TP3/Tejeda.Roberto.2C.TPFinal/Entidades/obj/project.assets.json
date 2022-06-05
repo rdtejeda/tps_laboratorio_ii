@@ -1,11 +1,49 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {}
+    "net5.0": {
+      "Excepciones/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Excepciones.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Excepciones.dll": {}
+        }
+      },
+      "PersistirDatos/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Excepciones": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/PersistirDatos.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PersistirDatos.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Excepciones/1.0.0": {
+      "type": "project",
+      "path": "../Excepciones/Excepciones.csproj",
+      "msbuildProject": "../Excepciones/Excepciones.csproj"
+    },
+    "PersistirDatos/1.0.0": {
+      "type": "project",
+      "path": "../PersistirDatos/PersistirDatos.csproj",
+      "msbuildProject": "../PersistirDatos/PersistirDatos.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0": []
+    "net5.0": [
+      "Excepciones >= 1.0.0",
+      "PersistirDatos >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Usuario\\.nuget\\packages\\": {},
@@ -38,7 +76,14 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Usuario\\Downloads\\UTNFrA\\Repositorios_Clonados_Compratido\\tps_laboratorio_ii\\TP3\\Tejeda.Roberto.2C.TPFinal\\Excepciones\\Excepciones.csproj": {
+              "projectPath": "C:\\Users\\Usuario\\Downloads\\UTNFrA\\Repositorios_Clonados_Compratido\\tps_laboratorio_ii\\TP3\\Tejeda.Roberto.2C.TPFinal\\Excepciones\\Excepciones.csproj"
+            },
+            "C:\\Users\\Usuario\\Downloads\\UTNFrA\\Repositorios_Clonados_Compratido\\tps_laboratorio_ii\\TP3\\Tejeda.Roberto.2C.TPFinal\\PersistirDatos\\PersistirDatos.csproj": {
+              "projectPath": "C:\\Users\\Usuario\\Downloads\\UTNFrA\\Repositorios_Clonados_Compratido\\tps_laboratorio_ii\\TP3\\Tejeda.Roberto.2C.TPFinal\\PersistirDatos\\PersistirDatos.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -1,5 +1,6 @@
-C:\Users\Usuario\Downloads\UTNFrA\Repositorios_Clonados_Compratido\tps_laboratorio_ii\TP3\Tejeda.Roberto.2C.TPFinal\FormUsuario\bin\Debug\net5.0-windows\Formularios.exe
+C:\Users\Usuario\Downloads\UTNFrA\Repositorios_Clonados_Compratido\tps_laboratorio_ii\TP3\Tejeda.Roberto.2C.TPFinal\FormUsuario\bin\Debug\net5.0-windows\clientesDTV.xml
 C:\Users\Usuario\Downloads\UTNFrA\Repositorios_Clonados_Compratido\tps_laboratorio_ii\TP3\Tejeda.Roberto.2C.TPFinal\FormUsuario\bin\Debug\net5.0-windows\usuariosDTV.xml
+C:\Users\Usuario\Downloads\UTNFrA\Repositorios_Clonados_Compratido\tps_laboratorio_ii\TP3\Tejeda.Roberto.2C.TPFinal\FormUsuario\bin\Debug\net5.0-windows\Formularios.exe
 C:\Users\Usuario\Downloads\UTNFrA\Repositorios_Clonados_Compratido\tps_laboratorio_ii\TP3\Tejeda.Roberto.2C.TPFinal\FormUsuario\bin\Debug\net5.0-windows\Formularios.deps.json
 C:\Users\Usuario\Downloads\UTNFrA\Repositorios_Clonados_Compratido\tps_laboratorio_ii\TP3\Tejeda.Roberto.2C.TPFinal\FormUsuario\bin\Debug\net5.0-windows\Formularios.runtimeconfig.json
 C:\Users\Usuario\Downloads\UTNFrA\Repositorios_Clonados_Compratido\tps_laboratorio_ii\TP3\Tejeda.Roberto.2C.TPFinal\FormUsuario\bin\Debug\net5.0-windows\Formularios.runtimeconfig.dev.json
@@ -9,12 +10,12 @@ C:\Users\Usuario\Downloads\UTNFrA\Repositorios_Clonados_Compratido\tps_laborator
 C:\Users\Usuario\Downloads\UTNFrA\Repositorios_Clonados_Compratido\tps_laboratorio_ii\TP3\Tejeda.Roberto.2C.TPFinal\FormUsuario\bin\Debug\net5.0-windows\Excepciones.dll
 C:\Users\Usuario\Downloads\UTNFrA\Repositorios_Clonados_Compratido\tps_laboratorio_ii\TP3\Tejeda.Roberto.2C.TPFinal\FormUsuario\bin\Debug\net5.0-windows\PersistirDatos.dll
 C:\Users\Usuario\Downloads\UTNFrA\Repositorios_Clonados_Compratido\tps_laboratorio_ii\TP3\Tejeda.Roberto.2C.TPFinal\FormUsuario\bin\Debug\net5.0-windows\Entidades.pdb
-C:\Users\Usuario\Downloads\UTNFrA\Repositorios_Clonados_Compratido\tps_laboratorio_ii\TP3\Tejeda.Roberto.2C.TPFinal\FormUsuario\bin\Debug\net5.0-windows\PersistirDatos.pdb
 C:\Users\Usuario\Downloads\UTNFrA\Repositorios_Clonados_Compratido\tps_laboratorio_ii\TP3\Tejeda.Roberto.2C.TPFinal\FormUsuario\bin\Debug\net5.0-windows\Excepciones.pdb
+C:\Users\Usuario\Downloads\UTNFrA\Repositorios_Clonados_Compratido\tps_laboratorio_ii\TP3\Tejeda.Roberto.2C.TPFinal\FormUsuario\bin\Debug\net5.0-windows\PersistirDatos.pdb
 C:\Users\Usuario\Downloads\UTNFrA\Repositorios_Clonados_Compratido\tps_laboratorio_ii\TP3\Tejeda.Roberto.2C.TPFinal\FormUsuario\obj\Debug\net5.0-windows\Formularios.csproj.AssemblyReference.cache
 C:\Users\Usuario\Downloads\UTNFrA\Repositorios_Clonados_Compratido\tps_laboratorio_ii\TP3\Tejeda.Roberto.2C.TPFinal\FormUsuario\obj\Debug\net5.0-windows\Formularios.FormAltaCliente.resources
 C:\Users\Usuario\Downloads\UTNFrA\Repositorios_Clonados_Compratido\tps_laboratorio_ii\TP3\Tejeda.Roberto.2C.TPFinal\FormUsuario\obj\Debug\net5.0-windows\Formularios.FormServiciosCliente.resources
-C:\Users\Usuario\Downloads\UTNFrA\Repositorios_Clonados_Compratido\tps_laboratorio_ii\TP3\Tejeda.Roberto.2C.TPFinal\FormUsuario\obj\Debug\net5.0-windows\FormUsuario.FormUsuario.resources
+C:\Users\Usuario\Downloads\UTNFrA\Repositorios_Clonados_Compratido\tps_laboratorio_ii\TP3\Tejeda.Roberto.2C.TPFinal\FormUsuario\obj\Debug\net5.0-windows\Formularios.FormUsuario.resources
 C:\Users\Usuario\Downloads\UTNFrA\Repositorios_Clonados_Compratido\tps_laboratorio_ii\TP3\Tejeda.Roberto.2C.TPFinal\FormUsuario\obj\Debug\net5.0-windows\Formularios.FormValidarCliente.resources
 C:\Users\Usuario\Downloads\UTNFrA\Repositorios_Clonados_Compratido\tps_laboratorio_ii\TP3\Tejeda.Roberto.2C.TPFinal\FormUsuario\obj\Debug\net5.0-windows\Formularios.Properties.Resources.resources
 C:\Users\Usuario\Downloads\UTNFrA\Repositorios_Clonados_Compratido\tps_laboratorio_ii\TP3\Tejeda.Roberto.2C.TPFinal\FormUsuario\obj\Debug\net5.0-windows\Formularios.csproj.GenerateResource.cache
@@ -28,4 +29,3 @@ C:\Users\Usuario\Downloads\UTNFrA\Repositorios_Clonados_Compratido\tps_laborator
 C:\Users\Usuario\Downloads\UTNFrA\Repositorios_Clonados_Compratido\tps_laboratorio_ii\TP3\Tejeda.Roberto.2C.TPFinal\FormUsuario\obj\Debug\net5.0-windows\Formularios.pdb
 C:\Users\Usuario\Downloads\UTNFrA\Repositorios_Clonados_Compratido\tps_laboratorio_ii\TP3\Tejeda.Roberto.2C.TPFinal\FormUsuario\obj\Debug\net5.0-windows\Formularios.genruntimeconfig.cache
 C:\Users\Usuario\Downloads\UTNFrA\Repositorios_Clonados_Compratido\tps_laboratorio_ii\TP3\Tejeda.Roberto.2C.TPFinal\FormUsuario\obj\Debug\net5.0-windows\ref\Formularios.dll
-C:\Users\Usuario\Downloads\UTNFrA\Repositorios_Clonados_Compratido\tps_laboratorio_ii\TP3\Tejeda.Roberto.2C.TPFinal\FormUsuario\bin\Debug\net5.0-windows\clientesDTV.xml

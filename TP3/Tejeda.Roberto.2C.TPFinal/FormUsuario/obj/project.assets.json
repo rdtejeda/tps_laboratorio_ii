@@ -5,6 +5,10 @@
       "Entidades/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Excepciones": "1.0.0",
+          "PersistirDatos": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/Entidades.dll": {}
         },
@@ -26,7 +30,6 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
-          "Entidades": "1.0.0",
           "Excepciones": "1.0.0"
         },
         "compile": {
@@ -58,6 +61,7 @@
   "projectFileDependencyGroups": {
     "net5.0-windows7.0": [
       "Entidades >= 1.0.0",
+      "Excepciones >= 1.0.0",
       "PersistirDatos >= 1.0.0"
     ]
   },
@@ -95,6 +99,9 @@
           "projectReferences": {
             "C:\\Users\\Usuario\\Downloads\\UTNFrA\\Repositorios_Clonados_Compratido\\tps_laboratorio_ii\\TP3\\Tejeda.Roberto.2C.TPFinal\\Entidades\\Entidades.csproj": {
               "projectPath": "C:\\Users\\Usuario\\Downloads\\UTNFrA\\Repositorios_Clonados_Compratido\\tps_laboratorio_ii\\TP3\\Tejeda.Roberto.2C.TPFinal\\Entidades\\Entidades.csproj"
+            },
+            "C:\\Users\\Usuario\\Downloads\\UTNFrA\\Repositorios_Clonados_Compratido\\tps_laboratorio_ii\\TP3\\Tejeda.Roberto.2C.TPFinal\\Excepciones\\Excepciones.csproj": {
+              "projectPath": "C:\\Users\\Usuario\\Downloads\\UTNFrA\\Repositorios_Clonados_Compratido\\tps_laboratorio_ii\\TP3\\Tejeda.Roberto.2C.TPFinal\\Excepciones\\Excepciones.csproj"
             },
             "C:\\Users\\Usuario\\Downloads\\UTNFrA\\Repositorios_Clonados_Compratido\\tps_laboratorio_ii\\TP3\\Tejeda.Roberto.2C.TPFinal\\PersistirDatos\\PersistirDatos.csproj": {
               "projectPath": "C:\\Users\\Usuario\\Downloads\\UTNFrA\\Repositorios_Clonados_Compratido\\tps_laboratorio_ii\\TP3\\Tejeda.Roberto.2C.TPFinal\\PersistirDatos\\PersistirDatos.csproj"

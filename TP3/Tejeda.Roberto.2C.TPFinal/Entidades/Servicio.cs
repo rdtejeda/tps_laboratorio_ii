@@ -27,11 +27,11 @@ namespace Entidades
         private EServicios servivio;
         private EFormaPago formaPago;
         private ECantidadDecos cantidadDecos;
-        private ESenialesPremiun senialPremium;
+        private List<ESenialesPremiun> senialPremium;
         public Servicio()
         {
         }
-        public Servicio(EServicios servivio, EFormaPago formaPago, ECantidadDecos cantidadDecos, ESenialesPremiun senialPremium)
+        public Servicio(EServicios servivio, EFormaPago formaPago, ECantidadDecos cantidadDecos, List<ESenialesPremiun> senialPremium)
         {
             this.servivio = servivio;
             this.formaPago = formaPago;
@@ -41,6 +41,6 @@ namespace Entidades
         public EServicios Servivio { get => servivio; set => servivio = value; }
         public EFormaPago FormaPago { get => formaPago; set => formaPago = value; }
         public ECantidadDecos CantidadDecos { get => cantidadDecos; set => cantidadDecos = value; }
-        public ESenialesPremiun SenialPremium { get => senialPremium; set => senialPremium = value; }
+        public List<ESenialesPremiun> SenialPremium { get => senialPremium; set => senialPremium = value; }
     }
 }

@@ -5,6 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Excepciones\Excepciones.csproj" />
+    <ProjectReference Include="..\PersistirDatos\PersistirDatos.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="clientesDTV.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

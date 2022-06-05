@@ -1,4 +1,4 @@
-﻿namespace FormUsuario
+﻿namespace Formularios
 {
     partial class FormUsuario
     {
@@ -60,7 +60,7 @@
             this.tBxNombreUsuario.Name = "tBxNombreUsuario";
             this.tBxNombreUsuario.Size = new System.Drawing.Size(172, 23);
             this.tBxNombreUsuario.TabIndex = 2;
-            this.tBxNombreUsuario.Text = "rtejeda0";
+            this.tBxNombreUsuario.Text = "rtejeda";
             // 
             // tBxPassword
             // 
@@ -90,7 +90,7 @@
             this.btnCerrar.UseVisualStyleBackColor = true;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
-            // FormUsuario
+            // Formularios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -106,7 +106,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FormUsuario";
+            this.Name = "Formularios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Usuario Aplicación DTV";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormUsuario_FormClosing);

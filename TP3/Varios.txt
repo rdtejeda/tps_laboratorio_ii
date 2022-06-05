@@ -1,0 +1,30 @@
+///CREAR BASE DE USUARIOS
+//List<UsuarioDTV> list = new List<UsuarioDTV>();
+//list.Add(new UsuarioDTV("18223125", "Roberto", "Tejeda", "rtejeda", "1234"));
+//list.Add(new UsuarioDTV("35567894", "Alberto", "Tejada", "atejada", "5678"));
+//list.Add(new UsuarioDTV("38909566", "Norberto", "Tejedor", "rtejedor", "9012"));
+Serializar<List<UsuarioDTV>> listaSerializada = new Serializar<List<UsuarioDTV>>();
+//listaSerializada.Guardar(path, "usuariosDTV.xml", list);
+
+
+CREAR BASE CLIENTES
+
+
+
+ENUM
+public enum EServicios
+        {
+            NoActivo, DTVGo, Plata, Oro
+        }
+        public enum EFormaPago
+        {
+            TarjetaCredito, TarjetaDebito
+        }
+        public enum ESenialesPremiun
+        {
+            HBO, Star, Paramount, FutbolArgentino, NBA
+        }
+        public enum ECantidadDecos
+        {
+            Cero, Uno, Dos, Tres, Cuatro, Cinco
+        }
