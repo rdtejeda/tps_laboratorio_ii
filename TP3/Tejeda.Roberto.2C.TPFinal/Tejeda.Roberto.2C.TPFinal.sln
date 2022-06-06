@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Formularios", "FormUsuario\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entidades", "Entidades\Entidades.csproj", "{64369FE6-827C-4A17-8222-7497C9C7FD5F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersistirDatos", "PersistirDatos\PersistirDatos.csproj", "{2F503BA5-9CC9-4998-BB89-0D217D9658D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersistirDatos", "PersistirDatos\PersistirDatos.csproj", "{2F503BA5-9CC9-4998-BB89-0D217D9658D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Excepciones", "Excepciones\Excepciones.csproj", "{91451EB2-249F-4D6A-8450-ED794B8DEE82}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Excepciones", "Excepciones\Excepciones.csproj", "{91451EB2-249F-4D6A-8450-ED794B8DEE82}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAppp", "TestAppp\TestAppp.csproj", "{60C055E9-1DEE-4B55-A00A-5280B2A8D595}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{91451EB2-249F-4D6A-8450-ED794B8DEE82}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91451EB2-249F-4D6A-8450-ED794B8DEE82}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91451EB2-249F-4D6A-8450-ED794B8DEE82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60C055E9-1DEE-4B55-A00A-5280B2A8D595}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60C055E9-1DEE-4B55-A00A-5280B2A8D595}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60C055E9-1DEE-4B55-A00A-5280B2A8D595}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60C055E9-1DEE-4B55-A00A-5280B2A8D595}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
