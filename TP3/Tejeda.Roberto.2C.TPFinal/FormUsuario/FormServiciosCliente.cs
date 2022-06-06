@@ -33,13 +33,20 @@ namespace Formularios
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            this.tBxDireccion.Text = cliente.Direccion;
-            this.comboBoxCantidadDecos.Text = cliente.Servicio.CantidadDecos.ToString();
-            this.comboBoxFormaPAgo.Text = cliente.Servicio.FormaPago.ToString();
-            this.comboBoxServicio.Text = cliente.Servicio.FormaPago.ToString();
-            foreach (Servicio.ESenialesPremiun item in cliente.Servicio.SenialPremium)
+            if(cliente.Servicio is not null)
             {
-                this.listBoxSeniales.Items.Add(item);
+                this.tBxDireccion.Text = cliente.Direccion;
+                this.comboBoxCantidadDecos.Text = cliente.Servicio.CantidadDecos.ToString();
+                this.comboBoxFormaPAgo.Text = cliente.Servicio.FormaPago.ToString();
+                this.comboBoxServicio.Text = cliente.Servicio.FormaPago.ToString();
+                foreach (Servicio.ESenialesPremiun item in cliente.Servicio.SenialPremium)
+                {
+                    this.listBoxSeniales.Items.Add(item);
+                }
+            }
+            else
+            {
+
             }
         }
 

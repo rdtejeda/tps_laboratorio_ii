@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
+using Excepciones;
 
 namespace Formularios
 {
@@ -33,14 +34,31 @@ namespace Formularios
         }
         private void btnValidar_Click(object sender, EventArgs e)
         {
-            if(txtDNI is not null)
+            try
             {
-                if(ClienteDTV.IdentificarCliente(txtDNI.Text) is not null)
+                if (txtDNI is not null)
                 {
-                    cliente = ClienteDTV.IdentificarCliente(txtDNI.Text);
-                    richTextBox1.Text = cliente.ToString();                    
-                }     
+                    if (ClienteDTV.IdentificarCliente(txtDNI.Text) is not null)
+                    {
+                        cliente = ClienteDTV.IdentificarCliente(txtDNI.Text);
+                        richTextBox1.Text = cliente.ToString();
+                    }
+                }
             }
+            catch(ClienteNoDisponibleException ex)
+            {
+                MessageBox.Show($"Aún no es Cliente {ex.Message}");
+            }
+            catch (ArchivoException ex)
+            {
+                MessageBox.Show($"No se ha logrado cargar la base de datos, {ex.Message}");
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            
         }
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {

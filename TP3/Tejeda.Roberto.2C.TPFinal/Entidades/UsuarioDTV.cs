@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Excepciones;
 using PersistirDatos;
+using static System.Environment;
 
 
 namespace Entidades
@@ -36,7 +37,7 @@ namespace Entidades
         {
             bool retorno = false;
             string path = null;
-            if ((path = AppDomain.CurrentDomain.BaseDirectory) is not null)
+            if(((path=GetFolderPath(SpecialFolder.Desktop)+@"\TP3\") is not null)) 
             {
                 try
                 {

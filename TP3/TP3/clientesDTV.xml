@@ -54,4 +54,16 @@
       </SenialPremium>
     </Servicio>
   </ClienteDTV>
+  <ClienteDTV>
+    <Dni>20447667</Dni>
+    <Nombre>Graciela</Nombre>
+    <Apellido>Arrua</Apellido>
+    <Direccion>VS 2345</Direccion>
+  </ClienteDTV>
+  <ClienteDTV>
+    <Dni>33444555</Dni>
+    <Nombre>Claudia</Nombre>
+    <Apellido />
+    <Direccion>Perez 2345</Direccion>
+  </ClienteDTV>
 </ArrayOfClienteDTV>

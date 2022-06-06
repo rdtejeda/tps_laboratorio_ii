@@ -1,6 +1,6 @@
+C:\Users\Usuario\Downloads\UTNFrA\Repositorios_Clonados_Compratido\tps_laboratorio_ii\TP3\Tejeda.Roberto.2C.TPFinal\FormUsuario\bin\Debug\net5.0-windows\Formularios.exe
 C:\Users\Usuario\Downloads\UTNFrA\Repositorios_Clonados_Compratido\tps_laboratorio_ii\TP3\Tejeda.Roberto.2C.TPFinal\FormUsuario\bin\Debug\net5.0-windows\clientesDTV.xml
 C:\Users\Usuario\Downloads\UTNFrA\Repositorios_Clonados_Compratido\tps_laboratorio_ii\TP3\Tejeda.Roberto.2C.TPFinal\FormUsuario\bin\Debug\net5.0-windows\usuariosDTV.xml
-C:\Users\Usuario\Downloads\UTNFrA\Repositorios_Clonados_Compratido\tps_laboratorio_ii\TP3\Tejeda.Roberto.2C.TPFinal\FormUsuario\bin\Debug\net5.0-windows\Formularios.exe
 C:\Users\Usuario\Downloads\UTNFrA\Repositorios_Clonados_Compratido\tps_laboratorio_ii\TP3\Tejeda.Roberto.2C.TPFinal\FormUsuario\bin\Debug\net5.0-windows\Formularios.deps.json
 C:\Users\Usuario\Downloads\UTNFrA\Repositorios_Clonados_Compratido\tps_laboratorio_ii\TP3\Tejeda.Roberto.2C.TPFinal\FormUsuario\bin\Debug\net5.0-windows\Formularios.runtimeconfig.json
 C:\Users\Usuario\Downloads\UTNFrA\Repositorios_Clonados_Compratido\tps_laboratorio_ii\TP3\Tejeda.Roberto.2C.TPFinal\FormUsuario\bin\Debug\net5.0-windows\Formularios.runtimeconfig.dev.json

@@ -1,24 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfClienteDTV xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ClienteDTV>
-    <Dni>12345678</Dni>
-    <Nombre>Pepe</Nombre>
-    <Apellido>Rodriguez</Apellido>
-    <Id>1</Id>
-    <Direccion>Perex 234</Direccion>
+    <Dni>18223125</Dni>
+    <Nombre>Roberto</Nombre>
+    <Apellido>Tejeda</Apellido>
+    <Direccion>Amoedo 234</Direccion>
+    <Servicio>
+      <Servivio>DTVGo</Servivio>
+      <FormaPago>TarjetaCredito</FormaPago>
+      <CantidadDecos>Dos</CantidadDecos>
+      <SenialPremium>
+        <ESenialesPremiun>HBO</ESenialesPremiun>
+        <ESenialesPremiun>Paramount</ESenialesPremiun>
+        <ESenialesPremiun>FutbolArgentino</ESenialesPremiun>
+        <ESenialesPremiun>NBA</ESenialesPremiun>
+        <ESenialesPremiun>Star</ESenialesPremiun>
+      </SenialPremium>
+    </Servicio>
   </ClienteDTV>
   <ClienteDTV>
     <Dni>12345678</Dni>
-    <Nombre>asddfhj</Nombre>
+    <Nombre>Jose</Nombre>
     <Apellido>Peruez</Apellido>
-    <Id>2</Id>
-    <Direccion>CXaacupoe 234</Direccion>
+    <Direccion>Urquiza 234</Direccion>
+    <Servicio>
+      <Servivio>DTVGo</Servivio>
+      <FormaPago>TarjetaDebito</FormaPago>
+      <CantidadDecos>Cuatro</CantidadDecos>
+      <SenialPremium>
+        <ESenialesPremiun>HBO</ESenialesPremiun>
+        <ESenialesPremiun>Paramount</ESenialesPremiun>
+        <ESenialesPremiun>FutbolArgentino</ESenialesPremiun>
+        <ESenialesPremiun>NBA</ESenialesPremiun>
+        <ESenialesPremiun>Star</ESenialesPremiun>
+      </SenialPremium>
+    </Servicio>
   </ClienteDTV>
   <ClienteDTV>
     <Dni>12345678</Dni>
-    <Nombre>aSD</Nombre>
+    <Nombre>Luis</Nombre>
     <Apellido>ASDasd</Apellido>
-    <Id>1</Id>
-    <Direccion>Perex 234</Direccion>
+    <Direccion>Mitre 234</Direccion>
+    <Servicio>
+      <Servivio>DTVGo</Servivio>
+      <FormaPago>TarjetaCredito</FormaPago>
+      <CantidadDecos>Dos</CantidadDecos>
+      <SenialPremium>
+        <ESenialesPremiun>HBO</ESenialesPremiun>
+        <ESenialesPremiun>Paramount</ESenialesPremiun>
+        <ESenialesPremiun>FutbolArgentino</ESenialesPremiun>
+        <ESenialesPremiun>NBA</ESenialesPremiun>
+        <ESenialesPremiun>Star</ESenialesPremiun>
+      </SenialPremium>
+    </Servicio>
   </ClienteDTV>
 </ArrayOfClienteDTV>

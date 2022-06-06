@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using PersistirDatos;
 using Excepciones;
+using static System.Environment;
 
 namespace Entidades
 {
@@ -33,9 +34,9 @@ namespace Entidades
         {
             ClienteDTV retorno = new ClienteDTV();
             string path = null;
-            if ((path = AppDomain.CurrentDomain.BaseDirectory) is not null)
+            try
             {
-                try
+                if (((path = GetFolderPath(SpecialFolder.Desktop) + @"\TP3\") is not null)) // ((path = AppDomain.CurrentDomain.BaseDirectory) is not null)
                 {
                     Serializar<List<ClienteDTV>> listaSerializadaC = new Serializar<List<ClienteDTV>>();
                     List<ClienteDTV> listaClientesosDTV = listaSerializadaC.Leer(path, "clientesDTV.xml");
@@ -47,59 +48,50 @@ namespace Entidades
                             return retorno;
                         }
                     }
-                    throw new ClienteNoDisponibleException("El Dni actual no es cliente");
-                }
-                catch (ArchivoException)
-                {
-                    throw;
-                }
-                catch (Exception)
-                {
-
-                    throw;
+                    throw new ClienteNoDisponibleException($"el Dni {dni}.");
                 }
             }
+            catch (ClienteNoDisponibleException)
+            {
+                throw;
+            }
+            catch (ArchivoException)
+            {
+                throw;
+            }
+            catch (Exception)
+            {
 
-            //List<ClienteDTV> lista = new List<ClienteDTV>();
-            //List<Servicio.ESenialesPremiun> listasnial = new List<Servicio.ESenialesPremiun>();
-            //listasnial.Add(Servicio.ESenialesPremiun.HBO);
-            //listasnial.Add(Servicio.ESenialesPremiun.Paramount);
-            //listasnial.Add(Servicio.ESenialesPremiun.FutbolArgentino);
-            //listasnial.Add(Servicio.ESenialesPremiun.NBA);
-            //listasnial.Add(Servicio.ESenialesPremiun.Star);
-
-            //lista.Add(new ClienteDTV("18223125", "Roberto", "Tejeda", "Amoedo 234",
-            //    new Servicio(Servicio.EServicios.DTVGo, Servicio.EFormaPago.TarjetaCredito, Servicio.ECantidadDecos.Dos, listasnial)));
-            //lista.Add(new ClienteDTV("12345678", "Jose", "Peruez", "Urquiza 234",
-            //    new Servicio(Servicio.EServicios.DTVGo, Servicio.EFormaPago.TarjetaDebito, Servicio.ECantidadDecos.Cuatro, listasnial)));
-            //lista.Add(new ClienteDTV("12345678", "Luis", "ASDasd", "Mitre 234",
-            //    new Servicio(Servicio.EServicios.DTVGo, Servicio.EFormaPago.TarjetaCredito, Servicio.ECantidadDecos.Dos, listasnial)));
-
-            //string path = AppDomain.CurrentDomain.BaseDirectory;
-
-            //Serializar<List<ClienteDTV>> listaSerializadaC = new Serializar<List<ClienteDTV>>();
-
-            //listaSerializadaC.Guardar(path, "clientesDTV.xml", lista);
-            
-            //List<ClienteDTV> listaClientesosDTV = listaSerializadaC.Leer(path, "clientesDTV.xml");
-
-            //StringBuilder sb = new StringBuilder();
-            //sb.AppendLine("Lista de Usuarios");
-            //foreach (UsuarioDTV item in listaUsuariosDTV)
-            //{
-
-            //    sb.AppendLine(item.ToString());
-            //}
-            //MessageBox.Show(sb.ToString());
-
-            //StringBuilder sb1 = new StringBuilder();
-            //sb1.AppendLine("Lista de Clientes");
-            //foreach (ClienteDTV item in listaClientesosDTV)
-            //{
-
-            //    sb1.AppendLine(item.ToString());
-            //}
+                throw;
+            }
             return retorno;
-        }   
+        }
+        public static void AgregarNuevoCliente(ClienteDTV cliente)
+        {
+            string path = null;
+            try
+            {
+                if (((path = GetFolderPath(SpecialFolder.Desktop) + @"\TP3\") is not null)) //((path = AppDomain.CurrentDomain.BaseDirectory) is not null)
+                {
+                    Serializar<List<ClienteDTV>> listaSerializadaC = new Serializar<List<ClienteDTV>>();                   
+                    List<ClienteDTV> listaClientesosDTV = listaSerializadaC.Leer(path, "clientesDTV.xml");
+                    listaClientesosDTV.Add(cliente);
+                    listaSerializadaC.Guardar(path, "clientesDTV.xml", listaClientesosDTV); 
+                }
+            }
+            catch (ClienteNoDisponibleException)
+            {
+                throw;
+            }
+            catch (ArchivoException)
+            {
+                throw;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }
