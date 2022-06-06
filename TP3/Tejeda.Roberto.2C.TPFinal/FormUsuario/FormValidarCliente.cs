@@ -36,13 +36,17 @@ namespace Formularios
         {
             try
             {
-                if (txtDNI is not null)
+                if (txtDNI.Text != string.Empty)
                 {
                     if (ClienteDTV.IdentificarCliente(txtDNI.Text) is not null)
                     {
                         cliente = ClienteDTV.IdentificarCliente(txtDNI.Text);
                         richTextBox1.Text = cliente.ToString();
                     }
+                }
+                else
+                {
+                    MessageBox.Show("DEBE INGRESAR UN DNI");
                 }
             }
             catch(ClienteNoDisponibleException ex)
@@ -55,10 +59,8 @@ namespace Formularios
             }
             catch (Exception)
             {
-
                 throw;
             }
-            
         }
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {

@@ -30,13 +30,18 @@ namespace Entidades
         {
             return $"{Nombre} {Apellido} - {Direccion} - {Dni}";
         }
+        /// <summary>
+        /// Identifica si un Cliente (DNI) esta en la base de datos 
+        /// </summary>
+        /// <param name="dni"></param>
+        /// <returns>Retorna el cliente</returns>
         public static ClienteDTV IdentificarCliente(string dni)
         {
-            ClienteDTV retorno = new ClienteDTV();
+            ClienteDTV retorno = null;
             string path = null;
             try
             {
-                if (((path = GetFolderPath(SpecialFolder.Desktop) + @"\TP3\") is not null)) // ((path = AppDomain.CurrentDomain.BaseDirectory) is not null)
+                if (((path = GetFolderPath(SpecialFolder.Desktop) + @"\TP3\") is not null))
                 {
                     Serializar<List<ClienteDTV>> listaSerializadaC = new Serializar<List<ClienteDTV>>();
                     List<ClienteDTV> listaClientesosDTV = listaSerializadaC.Leer(path, "clientesDTV.xml");
@@ -66,17 +71,60 @@ namespace Entidades
             }
             return retorno;
         }
+        /// <summary>
+        /// Agrega un nuevo cliente a la base de datos
+        /// </summary>
+        /// <param name="cliente"></param>
         public static void AgregarNuevoCliente(ClienteDTV cliente)
         {
             string path = null;
             try
             {
-                if (((path = GetFolderPath(SpecialFolder.Desktop) + @"\TP3\") is not null)) //((path = AppDomain.CurrentDomain.BaseDirectory) is not null)
+                if (((path = GetFolderPath(SpecialFolder.Desktop) + @"\TP3\") is not null))
                 {
                     Serializar<List<ClienteDTV>> listaSerializadaC = new Serializar<List<ClienteDTV>>();                   
                     List<ClienteDTV> listaClientesosDTV = listaSerializadaC.Leer(path, "clientesDTV.xml");
                     listaClientesosDTV.Add(cliente);
                     listaSerializadaC.Guardar(path, "clientesDTV.xml", listaClientesosDTV); 
+                }
+            }
+            catch (ClienteNoDisponibleException)
+            {
+                throw;
+            }
+            catch (ArchivoException)
+            {
+                throw;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+        /// <summary>
+        /// Modifica los servicios de un cliente
+        /// </summary>
+        /// <param name="cliente"></param>
+        public static void ModificarServiviosCliente(ClienteDTV cliente)
+        {
+            string path = null;
+            try
+            {
+                if (((path = GetFolderPath(SpecialFolder.Desktop) + @"\TP3\") is not null))
+                {
+                    Serializar<List<ClienteDTV>> listaSerializadaC = new Serializar<List<ClienteDTV>>();
+                    List<ClienteDTV> listaClientesosDTV = listaSerializadaC.Leer(path, "clientesDTV.xml");
+                    foreach (ClienteDTV item in listaClientesosDTV)
+                    {
+                        if(item.Dni ==cliente.Dni)
+                        {
+                            listaClientesosDTV.Remove(item);
+                            listaClientesosDTV.Add(cliente);
+                            break;
+                        }
+                    }                    
+                    listaSerializadaC.Guardar(path, "clientesDTV.xml", listaClientesosDTV);
                 }
             }
             catch (ClienteNoDisponibleException)

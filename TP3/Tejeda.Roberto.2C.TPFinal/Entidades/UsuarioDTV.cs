@@ -32,7 +32,12 @@ namespace Entidades
         {
             return $"{Nombre} - {Apellido} - {NombreUsuario}";
         }
-
+        /// <summary>
+        /// Corrobora la pertenencia de un nombre de usuario y password en la base de datos
+        /// </summary>
+        /// <param name="nombreUsuario"></param>
+        /// <param name="password"></param>
+        /// <returns>Retorno true si hay coinsidencia</returns>
         public static bool IdentificarUsuario(string nombreUsuario, string password)
         {
             bool retorno = false;
@@ -59,7 +64,6 @@ namespace Entidades
                 }
                 catch (Exception)
                 {
-
                     throw;
                 }
             }

@@ -19,9 +19,6 @@ namespace Formularios
         public FormUsuario()
         {
                 InitializeComponent();
-                //this.tBxNombreUsuario.Text = string.Empty;
-                //this.tBxPassword.Text = string.Empty;
-
         }
         private void FormUsuario_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -64,7 +61,6 @@ namespace Formularios
                 }
                 finally
                 {
-
                 }
             }
             else

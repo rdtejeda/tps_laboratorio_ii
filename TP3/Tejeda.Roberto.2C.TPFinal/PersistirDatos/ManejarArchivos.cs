@@ -10,6 +10,13 @@ namespace PersistirDatos
 {
     internal class ManejarArchivos : IResguardarDatos<string>
     {
+        /// <summary>
+        /// Genera el Path y Guarda el archivo
+        /// </summary>
+        /// <param name="path"></param>
+        /// <param name="nombreArchivo"></param>
+        /// <param name="contenido"></param>
+        /// <exception cref="ArchivoException"></exception>
         public void Guardar(string path, string nombreArchivo, string contenido)
         {
             try
@@ -23,7 +30,6 @@ namespace PersistirDatos
             }
             catch (DirectoryNotFoundException ex)
             {
-
                 throw new ArchivoException("El directorio no existe", ex);
             }
             catch (Exception)
@@ -31,7 +37,13 @@ namespace PersistirDatos
                 throw;
             }
         }
-
+        /// <summary>
+        /// Abre el archivo y Lee
+        /// </summary>
+        /// <param name="path"></param>
+        /// <param name="nombreArchivo"></param>
+        /// <returns>Devuelve el contenido del archivo</returns>
+        /// <exception cref="ArchivoException"></exception>
         public string Leer(string path, string nombreArchivo)
         {
             try

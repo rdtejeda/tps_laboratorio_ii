@@ -19,32 +19,30 @@ namespace PersistirDatos
         {
             manejarArchivos = new ManejarArchivos();
         }
+        /// <summary>
+        /// Serializa y Guarda archivos tipo Jayso y XML
+        /// </summary>
+        /// <param name="path"></param>
+        /// <param name="nombreArchivo"></param>
+        /// <param name="contenido"></param>
         public void Guardar(string path, string nombreArchivo, T contenido)
         {
             try
             {
-                //verifica si la extension es json y serializa en json sino xml
                 if (Path.GetExtension(nombreArchivo) == ".json")
                 {
                     JsonSerializerOptions options = new JsonSerializerOptions();
                     options.WriteIndented = true;
-
                     string json = JsonSerializer.Serialize(contenido, options);
-
-                    //Guardo el objeto en formato JSON en un archivo de texto
                     manejarArchivos.Guardar(path, nombreArchivo, json);
 
                 }
                 else if (Path.GetExtension(nombreArchivo) == ".xml")
                 {
-                    //Pat.Combine combina dos string en una ruta
                     string rutaCompleta = Path.Combine(path, nombreArchivo);
-
                     using (StreamWriter streamWriter = new StreamWriter(rutaCompleta))
                     {
                         XmlSerializer serializer = new XmlSerializer(typeof(T));
-
-                        //serializa el objeto y lo guarda en el archivo que recibe en el stream
                         serializer.Serialize(streamWriter, contenido);
                     }
                 }
@@ -58,18 +56,21 @@ namespace PersistirDatos
                 throw;
             }
         }
+        /// <summary>
+        /// Deserializa y lee el archivo tipo Jayson y xml
+        /// </summary>
+        /// <param name="path"></param>
+        /// <param name="nombreArchivo"></param>
+        /// <returns>Objeto leido</returns>
         public T Leer(string path, string nombreArchivo)
         {
-           // T retorno=null;
+            T retorno=null;
             try
             {
                 if (Path.GetExtension(nombreArchivo) == ".json")
                 {
-                    //leo el archivo de texto con el objeto serializado en json
                     string json = manejarArchivos.Leer(path, nombreArchivo);
-
-                    //recibe el string y lo convierte en objeto
-                    return JsonSerializer.Deserialize<T>(json);
+                    retorno= JsonSerializer.Deserialize<T>(json);
                 }
                 if (Path.GetExtension(nombreArchivo) == ".xml")
                 {
@@ -77,7 +78,7 @@ namespace PersistirDatos
                     using (XmlTextReader xmlTextReader = new XmlTextReader(rutaCompleta))
                     {
                         XmlSerializer serializer = new XmlSerializer(typeof(T));
-                        return serializer.Deserialize(xmlTextReader) as T;
+                        retorno = serializer.Deserialize(xmlTextReader) as T;
                     }
                 }
                 else
@@ -89,7 +90,7 @@ namespace PersistirDatos
             {
                 throw;
             }
-           // return retorno;
+            return retorno;
         }
     }
 }

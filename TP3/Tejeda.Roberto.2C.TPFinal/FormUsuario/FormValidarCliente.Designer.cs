@@ -67,7 +67,7 @@
             // 
             // btnValidar
             // 
-            this.btnValidar.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnValidar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnValidar.Location = new System.Drawing.Point(9, 86);
             this.btnValidar.Name = "btnValidar";
             this.btnValidar.Size = new System.Drawing.Size(153, 46);
@@ -78,7 +78,7 @@
             // 
             // btnAlta
             // 
-            this.btnAlta.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnAlta.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnAlta.Location = new System.Drawing.Point(9, 225);
             this.btnAlta.Name = "btnAlta";
             this.btnAlta.Size = new System.Drawing.Size(153, 50);
@@ -89,7 +89,7 @@
             // 
             // btnSeleccionar
             // 
-            this.btnSeleccionar.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnSeleccionar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnSeleccionar.Location = new System.Drawing.Point(9, 170);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(153, 49);
@@ -100,7 +100,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnSalir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnSalir.Location = new System.Drawing.Point(9, 290);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(153, 74);
@@ -131,7 +131,7 @@
             this.Controls.Add(this.txtDNI);
             this.Controls.Add(this.lldDni);
             this.Controls.Add(this.lblBienvenidaUsuario);
-            this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ForeColor = System.Drawing.SystemColors.Control;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

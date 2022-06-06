@@ -16,7 +16,7 @@ namespace Entidades
             this.nombre = nombre;
             this.apellido = apellido;          
         }
-        public string Dni { get => dni; set => dni = value; }
+        public string Dni  { get => dni; set => dni = value; }
         public string Nombre { get => nombre; set => nombre = value; }
         public string Apellido { get => apellido; set => apellido = value; }
     }
