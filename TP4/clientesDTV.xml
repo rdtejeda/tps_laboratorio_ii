@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfClienteDTV xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ClienteDTV>
+    <Dni>18223125</Dni>
+    <Nombre>Roberto</Nombre>
+    <Apellido>Tejeda</Apellido>
+    <Direccion>Amoedo 234</Direccion>
+    <Servicio>
+      <Servivio>DTVGo</Servivio>
+      <FormaPago>TarjetaCredito</FormaPago>
+      <CantidadDecos>Dos</CantidadDecos>
+      <SenialPremium>
+        <ESenialesPremiun>HBO</ESenialesPremiun>
+        <ESenialesPremiun>Paramount</ESenialesPremiun>
+        <ESenialesPremiun>FutbolArgentino</ESenialesPremiun>
+        <ESenialesPremiun>NBA</ESenialesPremiun>
+        <ESenialesPremiun>Star</ESenialesPremiun>
+      </SenialPremium>
+    </Servicio>
+  </ClienteDTV>
+  <ClienteDTV>
+    <Dni>12345678</Dni>
+    <Nombre>Jose</Nombre>
+    <Apellido>Peruez</Apellido>
+    <Direccion>Urquiza 234</Direccion>
+    <Servicio>
+      <Servivio>DTVGo</Servivio>
+      <FormaPago>TarjetaDebito</FormaPago>
+      <CantidadDecos>Cuatro</CantidadDecos>
+      <SenialPremium>
+        <ESenialesPremiun>HBO</ESenialesPremiun>
+        <ESenialesPremiun>Paramount</ESenialesPremiun>
+        <ESenialesPremiun>FutbolArgentino</ESenialesPremiun>
+        <ESenialesPremiun>NBA</ESenialesPremiun>
+        <ESenialesPremiun>Star</ESenialesPremiun>
+      </SenialPremium>
+    </Servicio>
+  </ClienteDTV>
+  <ClienteDTV>
+    <Dni>12345678</Dni>
+    <Nombre>Luis</Nombre>
+    <Apellido>ASDasd</Apellido>
+    <Direccion>Mitre 234</Direccion>
+    <Servicio>
+      <Servivio>DTVGo</Servivio>
+      <FormaPago>TarjetaCredito</FormaPago>
+      <CantidadDecos>Dos</CantidadDecos>
+      <SenialPremium>
+        <ESenialesPremiun>HBO</ESenialesPremiun>
+        <ESenialesPremiun>Paramount</ESenialesPremiun>
+        <ESenialesPremiun>FutbolArgentino</ESenialesPremiun>
+        <ESenialesPremiun>NBA</ESenialesPremiun>
+        <ESenialesPremiun>Star</ESenialesPremiun>
+      </SenialPremium>
+    </Servicio>
+  </ClienteDTV>
+  <ClienteDTV xsi:nil="true" />
+  <ClienteDTV>
+    <Dni>12345678</Dni>
+    <Nombre>Raquel</Nombre>
+    <Apellido>Lopez</Apellido>
+    <Direccion>Urquiza 1234</Direccion>
+  </ClienteDTV>
+  <ClienteDTV xsi:nil="true" />
+</ArrayOfClienteDTV>
