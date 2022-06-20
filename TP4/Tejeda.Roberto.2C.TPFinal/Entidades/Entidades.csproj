@@ -1,21 +1,16 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Excepciones\Excepciones.csproj" />
-    <ProjectReference Include="..\PersistirDatos\PersistirDatos.csproj" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="clientesDTV.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="usuariosDTV.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    <ProjectReference Include="..\Excepciones\Excepciones.csproj" />
+    <ProjectReference Include="..\PersistirDatos\PersistirDatos.csproj" />
   </ItemGroup>
 
 </Project>

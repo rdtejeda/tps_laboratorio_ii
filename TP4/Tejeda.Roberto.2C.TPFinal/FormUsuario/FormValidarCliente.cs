@@ -1,20 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Entidades;
+﻿using Entidades;
 using Excepciones;
+using System;
+using System.Windows.Forms;
 
 namespace Formularios
 {
     public partial class FormValidarCliente : Form
     {
         ClienteDTV cliente;
+
         public FormValidarCliente()
         {
             InitializeComponent();
@@ -49,7 +43,11 @@ namespace Formularios
                     MessageBox.Show("DEBE INGRESAR UN DNI");
                 }
             }
-            catch(ClienteNoDisponibleException ex)
+            catch (ClienteSinServiciosException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            catch (ClienteNoDisponibleException ex)
             {
                 MessageBox.Show($"Aún no es Cliente {ex.Message}");
             }
@@ -64,10 +62,17 @@ namespace Formularios
         }
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
-            FormServiciosCliente formServiciosCliente = new FormServiciosCliente();
-            formServiciosCliente.TraerCliente(cliente);
-            formServiciosCliente.Show();
-            this.Hide();
+            if (cliente is not null)
+            {
+                FormServiciosCliente formServiciosCliente = new FormServiciosCliente();
+                formServiciosCliente.TraerCliente(cliente);
+                formServiciosCliente.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Debe validar cliente");
+            }
         }
         private void btnAlta_Click(object sender, EventArgs e)
         {

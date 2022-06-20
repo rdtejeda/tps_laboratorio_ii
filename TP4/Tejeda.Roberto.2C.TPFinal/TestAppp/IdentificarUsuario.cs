@@ -1,5 +1,5 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Entidades;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace TestAppp
 {
@@ -12,7 +12,7 @@ namespace TestAppp
             string password = "1234";
             string nombreUsuario = "rtejeda";
 
-            Assert.IsTrue(UsuarioDTV.IdentificarUsuario(nombreUsuario, password));
+            Assert.IsTrue(UsuarioDTV.IdentificarUsuarioSQL(nombreUsuario, password));
         }
     }
 }

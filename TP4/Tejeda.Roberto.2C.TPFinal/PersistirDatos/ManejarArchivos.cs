@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Excepciones;
+using System;
 using System.IO;
-using Excepciones;
 
 namespace PersistirDatos
 {
@@ -13,15 +9,15 @@ namespace PersistirDatos
         /// <summary>
         /// Genera el Path y Guarda el archivo
         /// </summary>
-        /// <param name="path"></param>
-        /// <param name="nombreArchivo"></param>
-        /// <param name="contenido"></param>
+        /// <param name="path">Para construir Ruta absoluta</param>
+        /// <param name="nombreArchivo">Nombre del archivo</param>
+        /// <param name="contenido">Contenido</param>
         /// <exception cref="ArchivoException"></exception>
         public void Guardar(string path, string nombreArchivo, string contenido)
         {
             try
             {
-               string rutaCompleta = Path.Combine(path, nombreArchivo);
+                string rutaCompleta = Path.Combine(path, nombreArchivo);
 
                 using (StreamWriter streamWriter = new StreamWriter(rutaCompleta))
                 {
@@ -40,8 +36,8 @@ namespace PersistirDatos
         /// <summary>
         /// Abre el archivo y Lee
         /// </summary>
-        /// <param name="path"></param>
-        /// <param name="nombreArchivo"></param>
+        /// <param name="path">Para construir Ruta absoluta</param>
+        /// <param name="nombreArchivo">Nombre de archivo</param>
         /// <returns>Devuelve el contenido del archivo</returns>
         /// <exception cref="ArchivoException"></exception>
         public string Leer(string path, string nombreArchivo)

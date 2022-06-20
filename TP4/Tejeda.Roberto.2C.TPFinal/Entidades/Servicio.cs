@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Entidades
 {
@@ -30,6 +26,7 @@ namespace Entidades
         private List<ESenialesPremiun> senialPremium;
         public Servicio()
         {
+            this.SenialPremium = new List<ESenialesPremiun>();
         }
         public Servicio(EServicios servivio, EFormaPago formaPago, ECantidadDecos cantidadDecos, List<ESenialesPremiun> senialPremium)
         {

@@ -59,7 +59,7 @@
             // 
             // txtDNI
             // 
-            this.txtDNI.Location = new System.Drawing.Point(9, 57);
+            this.txtDNI.Location = new System.Drawing.Point(9, 68);
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(153, 23);
             this.txtDNI.TabIndex = 4;
@@ -68,7 +68,7 @@
             // btnValidar
             // 
             this.btnValidar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnValidar.Location = new System.Drawing.Point(9, 86);
+            this.btnValidar.Location = new System.Drawing.Point(9, 112);
             this.btnValidar.Name = "btnValidar";
             this.btnValidar.Size = new System.Drawing.Size(153, 46);
             this.btnValidar.TabIndex = 5;
@@ -79,9 +79,9 @@
             // btnAlta
             // 
             this.btnAlta.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnAlta.Location = new System.Drawing.Point(9, 225);
+            this.btnAlta.Location = new System.Drawing.Point(9, 267);
             this.btnAlta.Name = "btnAlta";
-            this.btnAlta.Size = new System.Drawing.Size(153, 50);
+            this.btnAlta.Size = new System.Drawing.Size(183, 74);
             this.btnAlta.TabIndex = 6;
             this.btnAlta.Text = "Alta Nuevo Cliente";
             this.btnAlta.UseVisualStyleBackColor = true;
@@ -90,7 +90,7 @@
             // btnSeleccionar
             // 
             this.btnSeleccionar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnSeleccionar.Location = new System.Drawing.Point(9, 170);
+            this.btnSeleccionar.Location = new System.Drawing.Point(9, 177);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(153, 49);
             this.btnSeleccionar.TabIndex = 7;
@@ -101,9 +101,9 @@
             // btnSalir
             // 
             this.btnSalir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnSalir.Location = new System.Drawing.Point(9, 290);
+            this.btnSalir.Location = new System.Drawing.Point(226, 267);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(153, 74);
+            this.btnSalir.Size = new System.Drawing.Size(192, 74);
             this.btnSalir.TabIndex = 9;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -111,9 +111,9 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(191, 19);
+            this.richTextBox1.Location = new System.Drawing.Point(191, 7);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(220, 345);
+            this.richTextBox1.Size = new System.Drawing.Size(227, 241);
             this.richTextBox1.TabIndex = 10;
             this.richTextBox1.Text = "";
             // 
@@ -122,7 +122,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(430, 389);
+            this.ClientSize = new System.Drawing.Size(440, 353);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnSeleccionar);

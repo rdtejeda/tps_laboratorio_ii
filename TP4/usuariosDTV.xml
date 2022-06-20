@@ -11,14 +11,14 @@
     <Dni>18456345</Dni>
     <Nombre>Alberto</Nombre>
     <Apellido>Tejada</Apellido>
-    <NombreUsuario>rtejada</NombreUsuario>
+    <NombreUsuario>atejada</NombreUsuario>
     <Passwword>5678</Passwword>
   </UsuarioDTV>
   <UsuarioDTV>
     <Dni>15678865</Dni>
     <Nombre>Norberto</Nombre>
     <Apellido>Tejedor</Apellido>
-    <NombreUsuario>rtejeor</NombreUsuario>
+    <NombreUsuario>ntejeda</NombreUsuario>
     <Passwword>9012</Passwword>
   </UsuarioDTV>
 </ArrayOfUsuarioDTV>

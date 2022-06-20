@@ -1,24 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfClienteDTV xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ClienteDTV>
-    <Dni>18223125</Dni>
-    <Nombre>Roberto</Nombre>
-    <Apellido>Tejeda</Apellido>
-    <Direccion>Amoedo 234</Direccion>
-    <Servicio>
-      <Servivio>DTVGo</Servivio>
-      <FormaPago>TarjetaCredito</FormaPago>
-      <CantidadDecos>Dos</CantidadDecos>
-      <SenialPremium>
-        <ESenialesPremiun>HBO</ESenialesPremiun>
-        <ESenialesPremiun>Paramount</ESenialesPremiun>
-        <ESenialesPremiun>FutbolArgentino</ESenialesPremiun>
-        <ESenialesPremiun>NBA</ESenialesPremiun>
-        <ESenialesPremiun>Star</ESenialesPremiun>
-      </SenialPremium>
-    </Servicio>
-  </ClienteDTV>
-  <ClienteDTV>
     <Dni>12345678</Dni>
     <Nombre>Jose</Nombre>
     <Apellido>Peruez</Apellido>
@@ -37,9 +19,33 @@
     </Servicio>
   </ClienteDTV>
   <ClienteDTV>
-    <Dni>12345678</Dni>
+    <Dni>18223126</Dni>
+    <Nombre>234</Nombre>
+    <Apellido>234</Apellido>
+    <Direccion>q3</Direccion>
+    <Servicio>
+      <Servivio>NoActivo</Servivio>
+      <FormaPago>TarjetaCredito</FormaPago>
+      <CantidadDecos>Cero</CantidadDecos>
+      <SenialPremium />
+    </Servicio>
+  </ClienteDTV>
+  <ClienteDTV>
+    <Dni>20447668</Dni>
+    <Nombre>Nicolas</Nombre>
+    <Apellido>Lattifi</Apellido>
+    <Direccion>Brown 234</Direccion>
+    <Servicio>
+      <Servivio>NoActivo</Servivio>
+      <FormaPago>TarjetaCredito</FormaPago>
+      <CantidadDecos>Cero</CantidadDecos>
+      <SenialPremium />
+    </Servicio>
+  </ClienteDTV>
+  <ClienteDTV>
+    <Dni>12345679</Dni>
     <Nombre>Luis</Nombre>
-    <Apellido>ASDasd</Apellido>
+    <Apellido>Asad</Apellido>
     <Direccion>Mitre 234</Direccion>
     <Servicio>
       <Servivio>DTVGo</Servivio>
@@ -49,17 +55,180 @@
         <ESenialesPremiun>HBO</ESenialesPremiun>
         <ESenialesPremiun>Paramount</ESenialesPremiun>
         <ESenialesPremiun>FutbolArgentino</ESenialesPremiun>
+        <ESenialesPremiun>HBO</ESenialesPremiun>
+        <ESenialesPremiun>Star</ESenialesPremiun>
         <ESenialesPremiun>NBA</ESenialesPremiun>
+      </SenialPremium>
+    </Servicio>
+  </ClienteDTV>
+  <ClienteDTV>
+    <Dni>20447667</Dni>
+    <Nombre>Pablo </Nombre>
+    <Apellido>Perez</Apellido>
+    <Direccion>Larrea 123</Direccion>
+    <Servicio>
+      <Servivio>DTVGo</Servivio>
+      <FormaPago>TarjetaCredito</FormaPago>
+      <CantidadDecos>Tres</CantidadDecos>
+      <SenialPremium>
+        <ESenialesPremiun>HBO</ESenialesPremiun>
+      </SenialPremium>
+    </Servicio>
+  </ClienteDTV>
+  <ClienteDTV>
+    <Dni>34567890</Dni>
+    <Nombre>Lucas</Nombre>
+    <Apellido>Albornoz</Apellido>
+    <Direccion>Blass parera 234</Direccion>
+    <Servicio>
+      <Servivio>Plata</Servivio>
+      <FormaPago>TarjetaCredito</FormaPago>
+      <CantidadDecos>Uno</CantidadDecos>
+      <SenialPremium>
+        <ESenialesPremiun>FutbolArgentino</ESenialesPremiun>
+      </SenialPremium>
+    </Servicio>
+  </ClienteDTV>
+  <ClienteDTV>
+    <Dni>90123456</Dni>
+    <Nombre>Roque</Nombre>
+    <Apellido>Perez</Apellido>
+    <Direccion>Olazabal 345</Direccion>
+    <Servicio>
+      <Servivio>Plata</Servivio>
+      <FormaPago>TarjetaDebito</FormaPago>
+      <CantidadDecos>Tres</CantidadDecos>
+      <SenialPremium>
+        <ESenialesPremiun>HBO</ESenialesPremiun>
+        <ESenialesPremiun>Star</ESenialesPremiun>
+        <ESenialesPremiun>NBA</ESenialesPremiun>
+      </SenialPremium>
+    </Servicio>
+  </ClienteDTV>
+  <ClienteDTV>
+    <Dni>98765432</Dni>
+    <Nombre>Raul</Nombre>
+    <Apellido>Uriarte</Apellido>
+    <Direccion>sdf</Direccion>
+    <Servicio>
+      <Servivio>NoActivo</Servivio>
+      <FormaPago>TarjetaCredito</FormaPago>
+      <CantidadDecos>Cero</CantidadDecos>
+      <SenialPremium />
+    </Servicio>
+  </ClienteDTV>
+  <ClienteDTV>
+    <Dni>98123456</Dni>
+    <Nombre>Alvarez</Nombre>
+    <Apellido>Gloria</Apellido>
+    <Direccion>Uruguay 234</Direccion>
+    <Servicio>
+      <Servivio>Plata</Servivio>
+      <FormaPago>TarjetaCredito</FormaPago>
+      <CantidadDecos>Tres</CantidadDecos>
+      <SenialPremium>
+        <ESenialesPremiun>Star</ESenialesPremiun>
+        <ESenialesPremiun>NBA</ESenialesPremiun>
+      </SenialPremium>
+    </Servicio>
+  </ClienteDTV>
+  <ClienteDTV>
+    <Dni>56789123</Dni>
+    <Nombre>Lopez </Nombre>
+    <Apellido>Enrique</Apellido>
+    <Direccion>sdfg</Direccion>
+    <Servicio>
+      <Servivio>NoActivo</Servivio>
+      <FormaPago>TarjetaCredito</FormaPago>
+      <CantidadDecos>Cero</CantidadDecos>
+      <SenialPremium />
+    </Servicio>
+  </ClienteDTV>
+  <ClienteDTV>
+    <Dni>67234987</Dni>
+    <Nombre>Diego</Nombre>
+    <Apellido>ElGrande</Apellido>
+    <Direccion>Alcaraz 10</Direccion>
+    <Servicio>
+      <Servivio>Plata</Servivio>
+      <FormaPago>TarjetaDebito</FormaPago>
+      <CantidadDecos>Tres</CantidadDecos>
+      <SenialPremium>
+        <ESenialesPremiun>FutbolArgentino</ESenialesPremiun>
         <ESenialesPremiun>Star</ESenialesPremiun>
       </SenialPremium>
     </Servicio>
   </ClienteDTV>
-  <ClienteDTV xsi:nil="true" />
   <ClienteDTV>
-    <Dni>12345678</Dni>
-    <Nombre>Raquel</Nombre>
-    <Apellido>Lopez</Apellido>
-    <Direccion>Urquiza 1234</Direccion>
+    <Dni>45123456</Dni>
+    <Nombre>Luisa</Nombre>
+    <Apellido>Albinoni</Apellido>
+    <Direccion>Zarate 1278</Direccion>
+    <Servicio>
+      <Servivio>NoActivo</Servivio>
+      <FormaPago>TarjetaCredito</FormaPago>
+      <CantidadDecos>Cero</CantidadDecos>
+      <SenialPremium />
+    </Servicio>
   </ClienteDTV>
-  <ClienteDTV xsi:nil="true" />
+  <ClienteDTV>
+    <Dni>78234561</Dni>
+    <Nombre>Patricia </Nombre>
+    <Apellido>Sosa</Apellido>
+    <Direccion>Latorre 123</Direccion>
+    <Servicio>
+      <Servivio>NoActivo</Servivio>
+      <FormaPago>TarjetaCredito</FormaPago>
+      <CantidadDecos>Cero</CantidadDecos>
+      <SenialPremium />
+    </Servicio>
+  </ClienteDTV>
+  <ClienteDTV>
+    <Dni>67234567</Dni>
+    <Nombre>Lisandro</Nombre>
+    <Apellido>ElMago</Apellido>
+    <Direccion>Danubio 3908</Direccion>
+    <Servicio>
+      <Servivio>NoActivo</Servivio>
+      <FormaPago>TarjetaCredito</FormaPago>
+      <CantidadDecos>Cero</CantidadDecos>
+      <SenialPremium />
+    </Servicio>
+  </ClienteDTV>
+  <ClienteDTV>
+    <Dni>45234123</Dni>
+    <Nombre>Lucia</Nombre>
+    <Apellido>Gomez</Apellido>
+    <Direccion>Saramago 345</Direccion>
+    <Servicio>
+      <Servivio>DTVGo</Servivio>
+      <FormaPago>TarjetaCredito</FormaPago>
+      <CantidadDecos>Cero</CantidadDecos>
+      <SenialPremium>
+        <ESenialesPremiun>Paramount</ESenialesPremiun>
+      </SenialPremium>
+    </Servicio>
+  </ClienteDTV>
+  <ClienteDTV>
+    <Dni>18223125</Dni>
+    <Nombre>Roberto</Nombre>
+    <Apellido>Tejeda</Apellido>
+    <Direccion>Larre 1238</Direccion>
+    <Servicio>
+      <Servivio>Plata</Servivio>
+      <FormaPago>TarjetaDebito</FormaPago>
+      <CantidadDecos>Dos</CantidadDecos>
+      <SenialPremium>
+        <ESenialesPremiun>Paramount</ESenialesPremiun>
+        <ESenialesPremiun>FutbolArgentino</ESenialesPremiun>
+        <ESenialesPremiun>Star</ESenialesPremiun>
+      </SenialPremium>
+    </Servicio>
+  </ClienteDTV>
+  <ClienteDTV>
+    <Dni>67564545</Dni>
+    <Nombre>Alejandro</Nombre>
+    <Apellido>Magno</Apellido>
+    <Direccion>Larre 23</Direccion>
+  </ClienteDTV>
 </ArrayOfClienteDTV>

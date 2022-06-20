@@ -14,7 +14,6 @@ namespace PersistirDatos
     public class Serializar<T> : IResguardarDatos<T> where T : class, new()
     {
         static ManejarArchivos manejarArchivos;
-
         static Serializar()
         {
             manejarArchivos = new ManejarArchivos();
@@ -22,9 +21,9 @@ namespace PersistirDatos
         /// <summary>
         /// Serializa y Guarda archivos tipo Jayso y XML
         /// </summary>
-        /// <param name="path"></param>
-        /// <param name="nombreArchivo"></param>
-        /// <param name="contenido"></param>
+        /// <param name="path">Ruta absoluta</param>
+        /// <param name="nombreArchivo">NOMBRE ARCHIVO</param>
+        /// <param name="contenido">cONTENIDO</param>
         public void Guardar(string path, string nombreArchivo, T contenido)
         {
             try
@@ -59,8 +58,8 @@ namespace PersistirDatos
         /// <summary>
         /// Deserializa y lee el archivo tipo Jayson y xml
         /// </summary>
-        /// <param name="path"></param>
-        /// <param name="nombreArchivo"></param>
+        /// <param name="path">Ruta absoluta</param>
+        /// <param name="nombreArchivo">Nombre archivo</param>
         /// <returns>Objeto leido</returns>
         public T Leer(string path, string nombreArchivo)
         {

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Entidades
+﻿namespace Entidades
 {
     public class Persona
     {
@@ -14,9 +12,9 @@ namespace Entidades
         {
             this.dni = dni;
             this.nombre = nombre;
-            this.apellido = apellido;          
+            this.apellido = apellido;
         }
-        public string Dni  { get => dni; set => dni = value; }
+        public string Dni { get => dni; set => dni = value; }
         public string Nombre { get => nombre; set => nombre = value; }
         public string Apellido { get => apellido; set => apellido = value; }
     }
