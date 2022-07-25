@@ -1,0 +1,12 @@
+C:\Users\Usuario\Downloads\UTNFrA\Repositorios_Clonados_Compratido\tps_laboratorio_ii\TP3\Tejeda.Roberto.2C.TPFinal\Serealizar\bin\Debug\net5.0\Serealizar.deps.json
+C:\Users\Usuario\Downloads\UTNFrA\Repositorios_Clonados_Compratido\tps_laboratorio_ii\TP3\Tejeda.Roberto.2C.TPFinal\Serealizar\bin\Debug\net5.0\Serealizar.dll
+C:\Users\Usuario\Downloads\UTNFrA\Repositorios_Clonados_Compratido\tps_laboratorio_ii\TP3\Tejeda.Roberto.2C.TPFinal\Serealizar\bin\Debug\net5.0\Serealizar.pdb
+C:\Users\Usuario\Downloads\UTNFrA\Repositorios_Clonados_Compratido\tps_laboratorio_ii\TP3\Tejeda.Roberto.2C.TPFinal\Serealizar\obj\Debug\net5.0\Serealizar.csproj.AssemblyReference.cache
+C:\Users\Usuario\Downloads\UTNFrA\Repositorios_Clonados_Compratido\tps_laboratorio_ii\TP3\Tejeda.Roberto.2C.TPFinal\Serealizar\obj\Debug\net5.0\Serealizar.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Downloads\UTNFrA\Repositorios_Clonados_Compratido\tps_laboratorio_ii\TP3\Tejeda.Roberto.2C.TPFinal\Serealizar\obj\Debug\net5.0\Serealizar.AssemblyInfoInputs.cache
+C:\Users\Usuario\Downloads\UTNFrA\Repositorios_Clonados_Compratido\tps_laboratorio_ii\TP3\Tejeda.Roberto.2C.TPFinal\Serealizar\obj\Debug\net5.0\Serealizar.AssemblyInfo.cs
+C:\Users\Usuario\Downloads\UTNFrA\Repositorios_Clonados_Compratido\tps_laboratorio_ii\TP3\Tejeda.Roberto.2C.TPFinal\Serealizar\obj\Debug\net5.0\Serealizar.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Downloads\UTNFrA\Repositorios_Clonados_Compratido\tps_laboratorio_ii\TP3\Tejeda.Roberto.2C.TPFinal\Serealizar\obj\Debug\net5.0\Serealizar.dll
+C:\Users\Usuario\Downloads\UTNFrA\Repositorios_Clonados_Compratido\tps_laboratorio_ii\TP3\Tejeda.Roberto.2C.TPFinal\Serealizar\obj\Debug\net5.0\refint\Serealizar.dll
+C:\Users\Usuario\Downloads\UTNFrA\Repositorios_Clonados_Compratido\tps_laboratorio_ii\TP3\Tejeda.Roberto.2C.TPFinal\Serealizar\obj\Debug\net5.0\Serealizar.pdb
+C:\Users\Usuario\Downloads\UTNFrA\Repositorios_Clonados_Compratido\tps_laboratorio_ii\TP3\Tejeda.Roberto.2C.TPFinal\Serealizar\obj\Debug\net5.0\ref\Serealizar.dll
