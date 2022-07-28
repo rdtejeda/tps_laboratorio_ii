@@ -13,19 +13,19 @@ namespace Entidades
             this.numero = 0;
         }
         /// <summary>
+        /// Recarga constructo strin usando Propiedad
+        /// </summary>
+        /// <param name="strNumero"></param>
+        public Operando(string strNumero)
+        {
+            this.Numero = strNumero;
+        }
+        /// <summary>
         /// Recarga constructor double
         /// </summary>
         /// <param name="numero"></param>
         public Operando(double numero) : this(numero.ToString())
         {
-        }
-        /// <summary>
-        /// Recarga constructo strin usando Propiedad
-        /// </summary>
-        /// <param name="strNumero"></param>
-        public Operando(string strNumero) 
-        {
-            this.Numero = strNumero;
         }
         /// <summary>
         /// Propiedad asigna un valor al atributo número, previa validación.
@@ -46,7 +46,6 @@ namespace Entidades
         private double ValidarOperando(string strNumero)
         {
             double operando = 0;
-
             for (int i = 0; i < strNumero.Length; i++)
             {
                 if (strNumero[i] == '.')
@@ -58,7 +57,6 @@ namespace Entidades
             {
                 return operando;
             }
-
             return operando;
         }
         /// <summary>
@@ -121,7 +119,7 @@ namespace Entidades
         /// Validar que la cadena de caracteres esté compuesta SOLAMENTE por caracteres '0' o '1'.
         /// </summary>
         /// <param name="binario">Cadena a validar</param>
-        /// <returns>True si es binario</returns>
+        /// <returns>True si es retorno</returns>
         private static bool EsBinario(string binario)
         {
             bool retorno = true;
@@ -139,7 +137,7 @@ namespace Entidades
             return retorno;
         }
         /// <summary>
-        /// Valida que se trate de un binario y convierte esenúmero binario a decimal.
+        /// Valida que se trate de un retorno y convierte esenúmero retorno a decimal.
         /// </summary>
         /// <param name="binario">String a corroborar</param>
         /// <returns>String Binario, Caso contrario retorna "Valorinválido".</returns>
@@ -181,10 +179,10 @@ namespace Entidades
         public static string DecimalBinario(double numero)
         {
             int auxiliar;
-            string binario = string.Empty;
+            string retorno = string.Empty;
             if ((int)numero == 0)
             {
-                binario = "0";
+                retorno = "0";
             }
             else
             {
@@ -192,10 +190,10 @@ namespace Entidades
                 {
                     auxiliar = (int)numero % 2;
                     numero = (int)numero / 2;
-                    binario = auxiliar.ToString() + binario;
+                    retorno = auxiliar.ToString() + retorno;
                 }
             }
-            return binario;
+            return retorno;
         }
         /// <summary>
         ///  Convierte un número decimal abinario, en caso de ser posible.
@@ -204,13 +202,19 @@ namespace Entidades
         /// <returns>String Decimal</returns>
         public static string DecimalBinario(string numero)
         {
-            int auxiliar;
-            string binario = string.Empty;
-            if (int.TryParse(numero, out auxiliar))
+            double auxiliar;
+            string retorno = string.Empty;
+            double absoluto;            
+            if (double.TryParse(numero, out auxiliar))
             {
-                binario = DecimalBinario(auxiliar);
+                absoluto = Math.Abs(auxiliar);               
+                retorno = DecimalBinario(absoluto);
             }
-            return binario;
+            else
+            {
+                retorno = "Valor Inválido";
+            }
+            return retorno;
         }
     }
 }

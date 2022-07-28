@@ -2,7 +2,7 @@
 
 namespace Entidades
 {
-    public static class Calculadora
+    public class Calculadora
     {
         /// <summary>
         /// Validar y realizar la operación pedida entre ambos números
@@ -16,7 +16,6 @@ namespace Entidades
         {
             double resultado = 0;
             char operadorAux = ValidarOperador(operador);
-
             if (num1 != null && num2 != null && !Char.IsLetterOrDigit(operador))
             {
                 switch (operadorAux)
@@ -31,7 +30,6 @@ namespace Entidades
                         resultado = num1 * num2;
                         break;
                     case '/':
-                        
                         resultado = num1 / num2;
                         break;
                     default:
@@ -43,7 +41,7 @@ namespace Entidades
         /// <summary>
         /// validar que el operadorrecibido sea +, -, / o *
         /// </summary>
-        /// <param name="operador"></param>
+        /// <param name="operador">Char recibido y a validar</param>
         /// <returns>Si se trata de un Operador valido lo retorna y de no ser asi retornará +</returns>
         private static char ValidarOperador(char operador)
         {

@@ -46,11 +46,12 @@
             this.cmbOperator.FormattingEnabled = true;
             this.cmbOperator.ItemHeight = 15;
             this.cmbOperator.Items.AddRange(new object[] {
+            "",
             "+",
             "-",
             "/",
             "*"});
-            this.cmbOperator.Location = new System.Drawing.Point(155, 61);
+            this.cmbOperator.Location = new System.Drawing.Point(133, 61);
             this.cmbOperator.Name = "cmbOperator";
             this.cmbOperator.Size = new System.Drawing.Size(39, 23);
             this.cmbOperator.TabIndex = 0;
@@ -69,7 +70,7 @@
             // btnConvertirADecimal
             // 
             this.btnConvertirADecimal.Font = new System.Drawing.Font("Segoe UI Emoji", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnConvertirADecimal.Location = new System.Drawing.Point(190, 194);
+            this.btnConvertirADecimal.Location = new System.Drawing.Point(163, 194);
             this.btnConvertirADecimal.Name = "btnConvertirADecimal";
             this.btnConvertirADecimal.Size = new System.Drawing.Size(154, 35);
             this.btnConvertirADecimal.TabIndex = 8;
@@ -91,7 +92,7 @@
             // btnLimpiar
             // 
             this.btnLimpiar.Font = new System.Drawing.Font("Segoe UI Emoji", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnLimpiar.Location = new System.Drawing.Point(133, 133);
+            this.btnLimpiar.Location = new System.Drawing.Point(118, 133);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(93, 34);
             this.btnLimpiar.TabIndex = 5;
@@ -102,7 +103,7 @@
             // btnCerrar
             // 
             this.btnCerrar.Font = new System.Drawing.Font("Segoe UI Emoji", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnCerrar.Location = new System.Drawing.Point(244, 133);
+            this.btnCerrar.Location = new System.Drawing.Point(217, 133);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(100, 34);
             this.btnCerrar.TabIndex = 6;
@@ -119,7 +120,7 @@
             // 
             // txtNumero2
             // 
-            this.txtNumero2.Location = new System.Drawing.Point(241, 61);
+            this.txtNumero2.Location = new System.Drawing.Point(190, 61);
             this.txtNumero2.Name = "txtNumero2";
             this.txtNumero2.Size = new System.Drawing.Size(100, 23);
             this.txtNumero2.TabIndex = 2;
@@ -128,27 +129,29 @@
             // 
             this.lblResultado.AutoSize = true;
             this.lblResultado.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblResultado.Location = new System.Drawing.Point(241, 9);
+            this.lblResultado.Location = new System.Drawing.Point(133, 12);
             this.lblResultado.Name = "lblResultado";
-            this.lblResultado.Size = new System.Drawing.Size(109, 22);
+            this.lblResultado.Size = new System.Drawing.Size(131, 22);
             this.lblResultado.TabIndex = 8;
-            this.lblResultado.Text = "Resultado";
+            this.lblResultado.Text = "Resultado :";
             this.lblResultado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lstOperaciones
             // 
+            this.lstOperaciones.BackColor = System.Drawing.SystemColors.Info;
             this.lstOperaciones.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lstOperaciones.FormattingEnabled = true;
             this.lstOperaciones.ItemHeight = 15;
-            this.lstOperaciones.Location = new System.Drawing.Point(350, 9);
+            this.lstOperaciones.Location = new System.Drawing.Point(323, 12);
             this.lstOperaciones.Name = "lstOperaciones";
-            this.lstOperaciones.Size = new System.Drawing.Size(195, 244);
+            this.lstOperaciones.Size = new System.Drawing.Size(228, 244);
             this.lstOperaciones.TabIndex = 3;
             // 
             // FormCalculadora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(557, 267);
             this.Controls.Add(this.lstOperaciones);
             this.Controls.Add(this.lblResultado);
@@ -160,6 +163,7 @@
             this.Controls.Add(this.btnConvertirADecimal);
             this.Controls.Add(this.btnConvertirABinario);
             this.Controls.Add(this.cmbOperator);
+            this.ForeColor = System.Drawing.SystemColors.Highlight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
