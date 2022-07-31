@@ -3,7 +3,6 @@ using PersistirDatos;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using static System.Environment;
 
 namespace Entidades
 {
@@ -36,21 +35,18 @@ namespace Entidades
             sb.AppendLine($"{Apellido}, {Nombre}");
             sb.AppendLine("DIRECCION");
             sb.AppendLine($"{Direccion}");
-            if (this.Servicio is not null)
+            if (this.Servicio is not null && this.Servicio.Servivio != Servicio.EServicios.NoActivo)
             {
-                sb.AppendLine($"SERVICIO {this.Servicio.Servivio}");
-                sb.AppendLine($"FORMA DE PAGO {this.Servicio.FormaPago}");
-                sb.AppendLine($"CANTIDAD DE DECODIFICADORES {this.Servicio.CantidadDecos}");
-                sb.AppendLine("LISTA DE SEÑALES PREMIUN");
-                foreach (Servicio.ESenialesPremiun item in this.Servicio.SenialPremium)
-                {
-                    sb.AppendLine($"{item}");
-                }
+                sb.AppendLine(Servicio.ToString());
+            }
+            else
+            {
+                sb.AppendLine("Aun no cuenta con servicios asociados");
             }
             return sb.ToString();
         }
         /// <summary>
-        /// Identifica si un Cliente (DNI) esta en la base de datos 
+        /// Identifica si un Cliente (DNI) esta en la base de datos SQL
         /// </summary>
         /// <param name="dni">DNI/Numero de cliente</param>
         /// <returns>Retorna el cliente</returns>
@@ -60,20 +56,16 @@ namespace Entidades
             string path = null;
             try
             {
-                if (((path = GetFolderPath(SpecialFolder.Desktop) + @"\TP4\") is not null))
+                List<ClienteDTV> listaClientesDTV = ClientesDTVDAO.Leer();
+                foreach (ClienteDTV item in listaClientesDTV)
                 {
-                    Serializar<List<ClienteDTV>> listaSerializadaC = new Serializar<List<ClienteDTV>>();
-                    List<ClienteDTV> listaClientesosDTV = listaSerializadaC.Leer(path, "clientesDTV.xml");
-                    foreach (ClienteDTV item in listaClientesosDTV)
+                    if (item.Dni == dni)
                     {
-                        if (item.Dni == dni)
-                        {
-                            retorno = item;
-                            return retorno;
-                        }
+                        retorno = item;
+                        return retorno;
                     }
-                    throw new ClienteNoDisponibleException($"el Dni {dni}.");
                 }
+                throw new ClienteNoDisponibleException($"el Dni {dni}.");
             }
             catch (ClienteNoDisponibleException)
             {
@@ -85,13 +77,12 @@ namespace Entidades
             }
             catch (Exception)
             {
-
                 throw;
             }
             return retorno;
         }
         /// <summary>
-        /// Busca un Cliente por su DNI/Numero de cliente en la base de datos
+        /// Busca un Cliente por su DNI/Numero de cliente en la base de datos SQL
         /// </summary>
         /// <param name="dni">DNI/Numero de cliente</param>
         /// <returns>Tru si es cliente y False si no lo es</returns>
@@ -101,17 +92,13 @@ namespace Entidades
             string path = null;
             try
             {
-                if (((path = GetFolderPath(SpecialFolder.Desktop) + @"\TP4\") is not null))
+                List<ClienteDTV> listaClientesDTV = ClientesDTVDAO.Leer();
+                foreach (ClienteDTV item in listaClientesDTV)
                 {
-                    Serializar<List<ClienteDTV>> listaSerializadaC = new Serializar<List<ClienteDTV>>();
-                    List<ClienteDTV> listaClientesosDTV = listaSerializadaC.Leer(path, "clientesDTV.xml");
-                    foreach (ClienteDTV item in listaClientesosDTV)
+                    if (item.Dni == dni)
                     {
-                        if (item.Dni == dni)
-                        {
-                            retorno = true;
-                            return retorno;
-                        }
+                        retorno = true;
+                        return retorno;
                     }
                 }
             }
@@ -127,7 +114,7 @@ namespace Entidades
             return retorno;
         }
         /// <summary>
-        /// Agrega un nuevo cliente a la base de datos
+        /// Agrega un nuevo cliente a la base de datos XML
         /// </summary>
         /// <param name="cliente">Cliente para agregar</param>
         public static void AgregarNuevoCliente(ClienteDTV cliente)
@@ -135,7 +122,7 @@ namespace Entidades
             string path = null;
             try
             {
-                if (((path = GetFolderPath(SpecialFolder.Desktop) + @"\TP4\") is not null))
+                if (((path = Environment.CurrentDirectory + @"\Archivos\") is not null))
                 {
                     Serializar<List<ClienteDTV>> listaSerializadaC = new Serializar<List<ClienteDTV>>();
                     List<ClienteDTV> listaClientesosDTV = listaSerializadaC.Leer(path, "clientesDTV.xml");
@@ -158,7 +145,7 @@ namespace Entidades
             }
         }
         /// <summary>
-        /// Modifica los servicios de un cliente
+        /// Modifica los servicios de un cliente en XML
         /// </summary>
         /// <param name="cliente">Clieneta a modificar</param>
         public static void ModificarServiviosCliente(ClienteDTV cliente)
@@ -166,7 +153,7 @@ namespace Entidades
             string path = null;
             try
             {
-                if (((path = GetFolderPath(SpecialFolder.Desktop) + @"\TP4\") is not null))
+                if (((path = Environment.CurrentDirectory + @"\Archivos\") is not null))
                 {
                     Serializar<List<ClienteDTV>> listaSerializadaC = new Serializar<List<ClienteDTV>>();
                     List<ClienteDTV> listaClientesosDTV = listaSerializadaC.Leer(path, "clientesDTV.xml");

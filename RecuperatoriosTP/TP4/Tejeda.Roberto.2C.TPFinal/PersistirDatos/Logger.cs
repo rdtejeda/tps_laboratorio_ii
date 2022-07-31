@@ -18,7 +18,9 @@ namespace PersistirDatos
         {
             try
             {
-                using (StreamWriter sw = new StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "/TP4/" + nombreArchivo, true, Encoding.UTF8))
+                string ruta;
+                ruta = Environment.CurrentDirectory + @"\Archivos\" + nombreArchivo;
+                using (StreamWriter sw = new StreamWriter(ruta, true, Encoding.UTF8))
                 {
                     sw.WriteLine($"{DateTime.Now} {mensaje}");
                 }

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Text;
 
 namespace Entidades
 {
@@ -39,5 +40,43 @@ namespace Entidades
         public EFormaPago FormaPago { get => formaPago; set => formaPago = value; }
         public ECantidadDecos CantidadDecos { get => cantidadDecos; set => cantidadDecos = value; }
         public List<ESenialesPremiun> SenialPremium { get => senialPremium; set => senialPremium = value; }
+        /// <summary>
+        /// Sobreescritura de Servicio
+        /// </summary>
+        /// <returns>String formateado</returns>
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"SERVICIO: {this.Servivio}");
+            if (this.FormaPago == EFormaPago.TarjetaCredito)
+            {
+                sb.AppendLine($"FORMA DE PAGO: Tarjeta de Credito");
+            }
+            else
+            {
+                sb.AppendLine($"FORMA DE PAGO: Tarjeta de Debito");
+            }
+            sb.AppendLine($"CANTIDAD DE DECODIFICADORES: {this.CantidadDecos}");
+            if (SenialPremium.Count > 0)
+            {
+                sb.AppendLine("LISTA DE SEÑALES PREMIUM");
+                foreach (ESenialesPremiun item in this.SenialPremium)
+                {
+                    if (item == ESenialesPremiun.FutbolArgentino)
+                    {
+                        sb.AppendLine("Fubol Argentino");
+                    }
+                    else
+                    {
+                        sb.AppendLine($"{item}");
+                    }
+                }
+            }
+            else
+            {
+                sb.AppendLine($"Aún No ha contratado señales premium");
+            }
+            return sb.ToString();
+        }
     }
 }

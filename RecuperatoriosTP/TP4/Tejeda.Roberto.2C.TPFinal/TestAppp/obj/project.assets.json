@@ -6687,11 +6687,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\TP4\\Tejeda.Roberto.2C.TPFinal\\TestAppp\\TestAppp.csproj",
+      "projectUniqueName": "C:\\Users\\Usuario\\Downloads\\UTNFrA\\Repositorios_Clonados_Compratido\\tps_laboratorio_ii\\RecuperatoriosTP\\TP4\\Tejeda.Roberto.2C.TPFinal\\TestAppp\\TestAppp.csproj",
       "projectName": "TestAppp",
-      "projectPath": "C:\\Users\\Usuario\\Desktop\\TP4\\Tejeda.Roberto.2C.TPFinal\\TestAppp\\TestAppp.csproj",
+      "projectPath": "C:\\Users\\Usuario\\Downloads\\UTNFrA\\Repositorios_Clonados_Compratido\\tps_laboratorio_ii\\RecuperatoriosTP\\TP4\\Tejeda.Roberto.2C.TPFinal\\TestAppp\\TestAppp.csproj",
       "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Usuario\\Desktop\\TP4\\Tejeda.Roberto.2C.TPFinal\\TestAppp\\obj\\",
+      "outputPath": "C:\\Users\\Usuario\\Downloads\\UTNFrA\\Repositorios_Clonados_Compratido\\tps_laboratorio_ii\\RecuperatoriosTP\\TP4\\Tejeda.Roberto.2C.TPFinal\\TestAppp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -6712,8 +6712,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\Usuario\\Desktop\\TP4\\Tejeda.Roberto.2C.TPFinal\\Entidades\\Entidades.csproj": {
-              "projectPath": "C:\\Users\\Usuario\\Desktop\\TP4\\Tejeda.Roberto.2C.TPFinal\\Entidades\\Entidades.csproj"
+            "C:\\Users\\Usuario\\Downloads\\UTNFrA\\Repositorios_Clonados_Compratido\\tps_laboratorio_ii\\RecuperatoriosTP\\TP4\\Tejeda.Roberto.2C.TPFinal\\Entidades\\Entidades.csproj": {
+              "projectPath": "C:\\Users\\Usuario\\Downloads\\UTNFrA\\Repositorios_Clonados_Compratido\\tps_laboratorio_ii\\RecuperatoriosTP\\TP4\\Tejeda.Roberto.2C.TPFinal\\Entidades\\Entidades.csproj"
             }
           }
         }

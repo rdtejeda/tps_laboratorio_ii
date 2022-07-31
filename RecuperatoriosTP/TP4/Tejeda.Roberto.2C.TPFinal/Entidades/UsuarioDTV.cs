@@ -2,7 +2,6 @@
 using PersistirDatos;
 using System;
 using System.Collections.Generic;
-using static System.Environment;
 
 
 namespace Entidades
@@ -76,12 +75,12 @@ namespace Entidades
         {
             bool retorno = false;
             string path = null;
-            if (((path = GetFolderPath(SpecialFolder.Desktop) + @"\TP4\") is not null))
+            if (((path = Environment.CurrentDirectory + @"\Archivos\") is not null))
             {
                 try
                 {
                     Serializar<List<UsuarioDTV>> listaSerializada = new Serializar<List<UsuarioDTV>>();
-                    List<UsuarioDTV> listaUsuariosDTV = listaSerializada.Leer(path, "usuariosDTV.xml");
+                    List<UsuarioDTV> listaUsuariosDTV = listaSerializada.Leer(path, "usuarioDTV.xml");
                     foreach (UsuarioDTV item in listaUsuariosDTV)
                     {
                         if (item.NombreUsuario == nombreUsuario && item.Passwword == password)

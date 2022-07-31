@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfClienteDTV xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ClienteDTV>
+    <Dni>234567</Dni>
+    <Nombre>Juan Manuel</Nombre>
+    <Apellido>de Rosas</Apellido>
+    <Direccion>El restaurador 290</Direccion>
+    <Servicio>
+      <Servivio>NoActivo</Servivio>
+      <FormaPago>TarjetaCredito</FormaPago>
+      <CantidadDecos>Cero</CantidadDecos>
+      <SenialPremium />
+    </Servicio>
+  </ClienteDTV>
+  <ClienteDTV>
+    <Dni>1289456</Dni>
+    <Nombre>Jose</Nombre>
+    <Apellido>San Martin</Apellido>
+    <Direccion>Cementerio Recoleta</Direccion>
+    <Servicio>
+      <Servivio>NoActivo</Servivio>
+      <FormaPago>TarjetaCredito</FormaPago>
+      <CantidadDecos>Cero</CantidadDecos>
+      <SenialPremium />
+    </Servicio>
+  </ClienteDTV>
+  <ClienteDTV>
+    <Dni>10345984</Dni>
+    <Nombre>Raul</Nombre>
+    <Apellido>Alfonsin</Apellido>
+    <Direccion>Salta 289</Direccion>
+    <Servicio>
+      <Servivio>NoActivo</Servivio>
+      <FormaPago>TarjetaCredito</FormaPago>
+      <CantidadDecos>Cero</CantidadDecos>
+      <SenialPremium />
+    </Servicio>
+  </ClienteDTV>
+  <ClienteDTV>
+    <Dni>18098193</Dni>
+    <Nombre>Micaela</Nombre>
+    <Apellido>Suarez</Apellido>
+    <Direccion>PUAN 267Mi</Direccion>
+    <Servicio>
+      <Servivio>NoActivo</Servivio>
+      <FormaPago>TarjetaCredito</FormaPago>
+      <CantidadDecos>Cero</CantidadDecos>
+      <SenialPremium />
+    </Servicio>
+  </ClienteDTV>
+  <ClienteDTV>
+    <Dni>18223125</Dni>
+    <Nombre>Roberto</Nombre>
+    <Apellido>Tejeda</Apellido>
+    <Direccion>Larrea 123</Direccion>
+    <Servicio>
+      <Servivio>Plata</Servivio>
+      <FormaPago>TarjetaCredito</FormaPago>
+      <CantidadDecos>Dos</CantidadDecos>
+      <SenialPremium>
+        <ESenialesPremiun>FutbolArgentino</ESenialesPremiun>
+      </SenialPremium>
+    </Servicio>
+  </ClienteDTV>
+  <ClienteDTV>
+    <Dni>24235466</Dni>
+    <Nombre>Pepe</Nombre>
+    <Apellido>Argento</Apellido>
+    <Direccion>Larroque 2890</Direccion>
+    <Servicio>
+      <Servivio>DTVGo</Servivio>
+      <FormaPago>TarjetaCredito</FormaPago>
+      <CantidadDecos>Cero</CantidadDecos>
+      <SenialPremium>
+        <ESenialesPremiun>FutbolArgentino</ESenialesPremiun>
+      </SenialPremium>
+    </Servicio>
+  </ClienteDTV>
+  <ClienteDTV>
+    <Dni>32546346</Dni>
+    <Nombre>Arturo</Nombre>
+    <Apellido>Bonin</Apellido>
+    <Direccion>Lopes 235</Direccion>
+    <Servicio>
+      <Servivio>Plata</Servivio>
+      <FormaPago>TarjetaCredito</FormaPago>
+      <CantidadDecos>Cero</CantidadDecos>
+      <SenialPremium>
+        <ESenialesPremiun>Star</ESenialesPremiun>
+        <ESenialesPremiun>Paramount</ESenialesPremiun>
+      </SenialPremium>
+    </Servicio>
+  </ClienteDTV>
+  <ClienteDTV>
+    <Dni>34892876</Dni>
+    <Nombre>Javier</Nombre>
+    <Apellido>Guzman</Apellido>
+    <Direccion>Latorrre 2</Direccion>
+    <Servicio>
+      <Servivio>Oro</Servivio>
+      <FormaPago>TarjetaDebito</FormaPago>
+      <CantidadDecos>Cero</CantidadDecos>
+      <SenialPremium>
+        <ESenialesPremiun>NBA</ESenialesPremiun>
+        <ESenialesPremiun>FutbolArgentino</ESenialesPremiun>
+      </SenialPremium>
+    </Servicio>
+  </ClienteDTV>
+  <ClienteDTV>
+    <Dni>34978596</Dni>
+    <Nombre>Carlos</Nombre>
+    <Apellido>Vives</Apellido>
+    <Direccion>Mao 456</Direccion>
+    <Servicio>
+      <Servivio>Plata</Servivio>
+      <FormaPago>TarjetaCredito</FormaPago>
+      <CantidadDecos>Tres</CantidadDecos>
+      <SenialPremium>
+        <ESenialesPremiun>Paramount</ESenialesPremiun>
+      </SenialPremium>
+    </Servicio>
+  </ClienteDTV>
+  <ClienteDTV>
+    <Dni>45678298</Dni>
+    <Nombre>Esteban</Nombre>
+    <Apellido>Prieto</Apellido>
+    <Direccion>Lafallet 389</Direccion>
+    <Servicio>
+      <Servivio>Oro</Servivio>
+      <FormaPago>TarjetaDebito</FormaPago>
+      <CantidadDecos>Dos</CantidadDecos>
+      <SenialPremium>
+        <ESenialesPremiun>HBO</ESenialesPremiun>
+        <ESenialesPremiun>NBA</ESenialesPremiun>
+        <ESenialesPremiun>Star</ESenialesPremiun>
+        <ESenialesPremiun>Paramount</ESenialesPremiun>
+      </SenialPremium>
+    </Servicio>
+  </ClienteDTV>
+  <ClienteDTV>
+    <Dni>67356734</Dni>
+    <Nombre>Eva</Nombre>
+    <Apellido>Peron</Apellido>
+    <Direccion>Roca 356</Direccion>
+    <Servicio>
+      <Servivio>NoActivo</Servivio>
+      <FormaPago>TarjetaCredito</FormaPago>
+      <CantidadDecos>Cero</CantidadDecos>
+      <SenialPremium />
+    </Servicio>
+  </ClienteDTV>
+  <ClienteDTV>
+    <Dni>76289156</Dni>
+    <Nombre>Charly</Nombre>
+    <Apellido>Garcia</Apellido>
+    <Direccion>Laralde 3456</Direccion>
+    <Servicio>
+      <Servivio>NoActivo</Servivio>
+      <FormaPago>TarjetaCredito</FormaPago>
+      <CantidadDecos>Cero</CantidadDecos>
+      <SenialPremium />
+    </Servicio>
+  </ClienteDTV>
+  <ClienteDTV>
+    <Dni>89098345</Dni>
+    <Nombre>Mao </Nombre>
+    <Apellido>Tsetum</Apellido>
+    <Direccion>Triuvirato 4023</Direccion>
+    <Servicio>
+      <Servivio>Plata</Servivio>
+      <FormaPago>TarjetaDebito</FormaPago>
+      <CantidadDecos>Tres</CantidadDecos>
+      <SenialPremium>
+        <ESenialesPremiun>FutbolArgentino</ESenialesPremiun>
+      </SenialPremium>
+    </Servicio>
+  </ClienteDTV>
+  <ClienteDTV>
+    <Dni>89654100</Dni>
+    <Nombre>Facundo </Nombre>
+    <Apellido>Cabral</Apellido>
+    <Direccion>Larrea 12</Direccion>
+    <Servicio>
+      <Servivio>NoActivo</Servivio>
+      <FormaPago>TarjetaCredito</FormaPago>
+      <CantidadDecos>Cero</CantidadDecos>
+      <SenialPremium />
+    </Servicio>
+  </ClienteDTV>
+  <ClienteDTV>
+    <Dni>98123908</Dni>
+    <Nombre>Diego</Nombre>
+    <Apellido>Maradona</Apellido>
+    <Direccion>Habana 4310</Direccion>
+    <Servicio>
+      <Servivio>NoActivo</Servivio>
+      <FormaPago>TarjetaCredito</FormaPago>
+      <CantidadDecos>Cero</CantidadDecos>
+      <SenialPremium />
+    </Servicio>
+  </ClienteDTV>
+</ArrayOfClienteDTV>

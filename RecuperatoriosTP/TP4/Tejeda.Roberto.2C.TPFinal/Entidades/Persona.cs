@@ -1,5 +1,9 @@
-﻿namespace Entidades
+﻿using System.Xml.Serialization;
+
+namespace Entidades
 {
+    [XmlInclude(typeof(ClienteDTV))]
+    [XmlInclude(typeof(UsuarioDTV))]
     public class Persona
     {
         private string dni;

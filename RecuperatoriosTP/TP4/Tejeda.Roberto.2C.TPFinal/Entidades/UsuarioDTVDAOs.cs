@@ -13,7 +13,6 @@ namespace Entidades
         private static SqlConnection connection;
         private static SqlCommand command;
 
-
         static UsuarioDTVDAOs()
         {
             connectionString = @"Server=.;Database=TEJEDA2C-TPF; Trusted_Connection=True;";
@@ -22,6 +21,10 @@ namespace Entidades
             command.CommandType = System.Data.CommandType.Text;
             command.Connection = connection;
         }
+        /// <summary>
+        /// Lee los usuarios habilitados para ingresar a la app
+        /// </summary>
+        /// <returns>Lista de usuarios</returns>
         public static List<UsuarioDTV> Leer()
         {
             List<UsuarioDTV> lista = new List<UsuarioDTV>();
@@ -46,11 +49,9 @@ namespace Entidades
                     lista.Add(usuario);
                 }
                 return lista;
-
             }
             catch (Exception)
             {
-
                 throw;
             }
             finally

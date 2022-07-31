@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersistirDatos", "Persistir
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Excepciones", "Excepciones\Excepciones.csproj", "{91451EB2-249F-4D6A-8450-ED794B8DEE82}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAppp", "TestAppp\TestAppp.csproj", "{60C055E9-1DEE-4B55-A00A-5280B2A8D595}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestAppp", "TestAppp\TestAppp.csproj", "{60C055E9-1DEE-4B55-A00A-5280B2A8D595}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

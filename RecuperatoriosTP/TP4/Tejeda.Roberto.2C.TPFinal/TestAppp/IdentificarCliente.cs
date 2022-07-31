@@ -1,7 +1,6 @@
 ﻿using Entidades;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-
 namespace TestAppp
 {
     [TestClass]
