@@ -34,3 +34,15 @@ C:\Users\Usuario\Desktop\TP4\Tejeda.Roberto.2C.TPFinal\Excepciones\obj\Debug\net
 C:\Users\Usuario\Desktop\TP4\Tejeda.Roberto.2C.TPFinal\Excepciones\obj\Debug\net5.0\refint\Excepciones.dll
 C:\Users\Usuario\Desktop\TP4\Tejeda.Roberto.2C.TPFinal\Excepciones\obj\Debug\net5.0\Excepciones.pdb
 C:\Users\Usuario\Desktop\TP4\Tejeda.Roberto.2C.TPFinal\Excepciones\obj\Debug\net5.0\ref\Excepciones.dll
+C:\Users\Usuario\Downloads\UTNFrA\Repositorios_Clonados_Compratido\tps_laboratorio_ii\RecuperatoriosTP\TP4\Tejeda.Roberto.2C.TPFinal\Excepciones\bin\Debug\net5.0\Excepciones.deps.json
+C:\Users\Usuario\Downloads\UTNFrA\Repositorios_Clonados_Compratido\tps_laboratorio_ii\RecuperatoriosTP\TP4\Tejeda.Roberto.2C.TPFinal\Excepciones\bin\Debug\net5.0\Excepciones.dll
+C:\Users\Usuario\Downloads\UTNFrA\Repositorios_Clonados_Compratido\tps_laboratorio_ii\RecuperatoriosTP\TP4\Tejeda.Roberto.2C.TPFinal\Excepciones\bin\Debug\net5.0\Excepciones.pdb
+C:\Users\Usuario\Downloads\UTNFrA\Repositorios_Clonados_Compratido\tps_laboratorio_ii\RecuperatoriosTP\TP4\Tejeda.Roberto.2C.TPFinal\Excepciones\obj\Debug\net5.0\Excepciones.csproj.AssemblyReference.cache
+C:\Users\Usuario\Downloads\UTNFrA\Repositorios_Clonados_Compratido\tps_laboratorio_ii\RecuperatoriosTP\TP4\Tejeda.Roberto.2C.TPFinal\Excepciones\obj\Debug\net5.0\Excepciones.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Downloads\UTNFrA\Repositorios_Clonados_Compratido\tps_laboratorio_ii\RecuperatoriosTP\TP4\Tejeda.Roberto.2C.TPFinal\Excepciones\obj\Debug\net5.0\Excepciones.AssemblyInfoInputs.cache
+C:\Users\Usuario\Downloads\UTNFrA\Repositorios_Clonados_Compratido\tps_laboratorio_ii\RecuperatoriosTP\TP4\Tejeda.Roberto.2C.TPFinal\Excepciones\obj\Debug\net5.0\Excepciones.AssemblyInfo.cs
+C:\Users\Usuario\Downloads\UTNFrA\Repositorios_Clonados_Compratido\tps_laboratorio_ii\RecuperatoriosTP\TP4\Tejeda.Roberto.2C.TPFinal\Excepciones\obj\Debug\net5.0\Excepciones.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Downloads\UTNFrA\Repositorios_Clonados_Compratido\tps_laboratorio_ii\RecuperatoriosTP\TP4\Tejeda.Roberto.2C.TPFinal\Excepciones\obj\Debug\net5.0\Excepciones.dll
+C:\Users\Usuario\Downloads\UTNFrA\Repositorios_Clonados_Compratido\tps_laboratorio_ii\RecuperatoriosTP\TP4\Tejeda.Roberto.2C.TPFinal\Excepciones\obj\Debug\net5.0\refint\Excepciones.dll
+C:\Users\Usuario\Downloads\UTNFrA\Repositorios_Clonados_Compratido\tps_laboratorio_ii\RecuperatoriosTP\TP4\Tejeda.Roberto.2C.TPFinal\Excepciones\obj\Debug\net5.0\Excepciones.pdb
+C:\Users\Usuario\Downloads\UTNFrA\Repositorios_Clonados_Compratido\tps_laboratorio_ii\RecuperatoriosTP\TP4\Tejeda.Roberto.2C.TPFinal\Excepciones\obj\Debug\net5.0\ref\Excepciones.dll

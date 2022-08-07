@@ -1,0 +1,14 @@
+﻿3/8/2022 21:03:17 Se registo la Excepcio Cannot access a disposed object.
+Object name: 'FrmValidarCliente'.
+6/8/2022 12:34:10 Se registo la Excepcio Cannot access a disposed object.
+Object name: 'FrmValidarCliente'.
+6/8/2022 12:51:24 Se registo la Excepcio Cannot access a disposed object.
+Object name: 'FrmValidarCliente'.
+6/8/2022 17:20:21 Se registo la Excepcio Cannot access a disposed object.
+Object name: 'FrmValidarCliente'.
+6/8/2022 20:47:11 Se registo la Excepcio Cannot access a disposed object.
+Object name: 'FrmValidarCliente'.
+6/8/2022 21:00:10 Se registo la Excepcio Cannot access a disposed object.
+Object name: 'FrmValidarCliente'.
+7/8/2022 12:13:11 Se registo la Excepcio Cannot access a disposed object.
+Object name: 'FrmValidarCliente'.

@@ -13,25 +13,37 @@ namespace Formularios
     {
         ClienteDTV cliente;
         Temporizador temporizador;
-        Task tareReloj;
-        CancellationTokenSource cancelTokenSource = new CancellationTokenSource();
-
+        Task tareaReloj;
+        CancellationTokenSource cancelTokenSource;
         public FrmValidarCliente()
         {
             InitializeComponent();
             temporizador = new Temporizador();
+            cancelTokenSource = new CancellationTokenSource();
+            tareaReloj = new Task(() => IniciarHora(cancelTokenSource.Token));
         }
         private void FrmValidarCliente_Load(object sender, EventArgs e)
         {
-            tareReloj = Task.Run(() => IniciarHora(cancelTokenSource));
-            temporizador.OnTiempoFinalizado += BackupXML_OnTiempoFinalizado;
-            Task.Run(() => HacerBackupXML(cancelTokenSource));
+            tareaReloj.Start();
+            temporizador.OnTiempoFinal += BackupXML_OnTiempoFinalizado;
+            Task.Run(() => HacerBackupXML(cancelTokenSource.Token));
         }
-        private void HacerBackupXML(CancellationTokenSource cts)
+        private void btnListaClientes_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dGVClientes.DataSource = ClientesDTVDAO.Leer();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"La lista de clientes no pudo ser cargada, excepción {ex.Message}");
+            }
+        }
+        private void HacerBackupXML(CancellationToken cts)
         {
             if (!cts.IsCancellationRequested)
             {
-                temporizador.Ejecutar(10);
+                temporizador.Ejecutar(10, cts);
             }
         }
         private void BackupXML_OnTiempoFinalizado()
@@ -51,20 +63,6 @@ namespace Formularios
             {
                 MessageBox.Show(ex.Message);
             }
-        }
-        public void ActualizarMensaje(string nombre)
-        {
-            this.lblBienvenidaUsuario.Text = this.lblBienvenidaUsuario.Text + nombre;
-        }
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            cancelTokenSource.Cancel();
-            Close();
-        }
-        private void FormValidarCliente_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            this.Hide();
-            Program.formUsuario.Show();
         }
         private void btnValidar_Click(object sender, EventArgs e)
         {
@@ -108,11 +106,11 @@ namespace Formularios
                     FrmServiciosCliente formServiciosCliente = new FrmServiciosCliente();
                     formServiciosCliente.TraerCliente(cliente);
                     formServiciosCliente.Show();
-                    this.Hide();
+                    //this.Hide();
                 }
                 else
                 {
-                    MessageBox.Show("Debe validar cliente");
+                    MessageBox.Show("Debe validar El Cliente antes de seleccionarlo");
                 }
             }
             catch (Exception ex)
@@ -124,28 +122,47 @@ namespace Formularios
         {
             FrmAltaCliente formAltaCliente = new FrmAltaCliente();
             formAltaCliente.Show();
-            this.Hide();
         }
-        private void IniciarHora(CancellationTokenSource cts)
+        private void IniciarHora(CancellationToken cts)
         {
             do
             {
-                if (cts.IsCancellationRequested)
-                    break;
-                AsignarHora();
-                Thread.Sleep(1000);
+                if (!cts.IsCancellationRequested)
+                {
+                    AsignarHora(cts);
+                    Thread.Sleep(1000);
+                }
             } while (true);
         }
-        private void AsignarHora()
+        private void AsignarHora(CancellationToken cts)
         {
-            if (this.InvokeRequired)
+            try
             {
-                Action delegado = AsignarHora;
-                this.Invoke(delegado);
+                if (!cts.IsCancellationRequested)
+                {
+                    if (this.InvokeRequired)
+                    {
+                        Action<CancellationToken> delegado = new Action<CancellationToken>(AsignarHora);
+                        object[] obj = new object[] { cts };
+                        this.Invoke(delegado, obj);
+                    }
+                    else
+                    {
+                        lblFechaHora.Text = DateTime.Now.ToString("F");
+                    }
+                }
             }
-            else
+            catch (TaskCanceledException ex)
             {
-                lblFechaHora.Text = DateTime.Now.ToString("F");
+                Logger.Log($"Se registo la Excepcion {ex.Message}", "Excepciones.txt");
+            }
+            catch (OperationCanceledException ex)
+            {
+                Logger.Log($"Se registo la Excepcio {ex.Message}", "Excepciones.txt");
+            }
+            catch (Exception ex)
+            {
+                Logger.Log($"Se registo la Excepcio {ex.Message}", "Excepciones.txt");
             }
         }
         private void ListaXMLActualizada()
@@ -157,8 +174,55 @@ namespace Formularios
             }
             else
             {
-                lblListaxmlActualizada.Text = $"Lista actaulizada a las {DateTime.Now.ToString("T")}";
+                lblListaxmlActualizada.Text = $"BackUp XML realizado el {DateTime.Now.ToString("G")}";
             }
+        }
+        private void dGVClientes_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int dniAux;
+            if (int.TryParse(dGVClientes.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString(), out dniAux))
+            {
+                txtDNI.Text = dGVClientes.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+            }
+        }
+        private void btnReclamo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cliente is not null)
+                {
+                    FrmReclamo formReclamo = new FrmReclamo();
+                    formReclamo.TraerCliente(cliente.Dni);
+                    formReclamo.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Debe validar El Cliente antes de seleccionarlo");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+        private void FormValidarCliente_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Cerrar?", "Desea Salir?", MessageBoxButtons.YesNo, MessageBoxIcon.Hand) == DialogResult.No)
+            {
+                cancelTokenSource.Cancel();
+                Thread.Sleep(1000);
+                e.Cancel = true;
+            }
+            Program.formUsuario.Show();
+        }
+        public void ActualizarMensaje(string nombre)
+        {
+            this.lblBienvenidaUsuario.Text = this.lblBienvenidaUsuario.Text + nombre;
         }
     }
 }

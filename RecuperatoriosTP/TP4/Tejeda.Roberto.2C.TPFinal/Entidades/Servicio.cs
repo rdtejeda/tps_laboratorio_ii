@@ -21,7 +21,7 @@ namespace Entidades
         {
             Cero, Uno, Dos, Tres, Cuatro, Cinco
         }
-        private EServicios servivio;
+        private EServicios servicio;
         private EFormaPago formaPago;
         private ECantidadDecos cantidadDecos;
         private List<ESenialesPremiun> senialPremium;
@@ -31,15 +31,16 @@ namespace Entidades
         }
         public Servicio(EServicios servivio, EFormaPago formaPago, ECantidadDecos cantidadDecos, List<ESenialesPremiun> senialPremium)
         {
-            this.servivio = servivio;
+            this.servicio = servivio;
             this.formaPago = formaPago;
             this.cantidadDecos = cantidadDecos;
             this.senialPremium = senialPremium;
         }
-        public EServicios Servivio { get => servivio; set => servivio = value; }
+        public EServicios Servivio { get => servicio; set => servicio = value; }
         public EFormaPago FormaPago { get => formaPago; set => formaPago = value; }
         public ECantidadDecos CantidadDecos { get => cantidadDecos; set => cantidadDecos = value; }
         public List<ESenialesPremiun> SenialPremium { get => senialPremium; set => senialPremium = value; }
+
         /// <summary>
         /// Sobreescritura de Servicio
         /// </summary>
@@ -47,7 +48,7 @@ namespace Entidades
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine($"SERVICIO: {this.Servivio}");
+            sb.Append($"SERVICIO: {ToStringEServicios(this.Servivio)}");
             if (this.FormaPago == EFormaPago.TarjetaCredito)
             {
                 sb.AppendLine($"FORMA DE PAGO: Tarjeta de Credito");
@@ -75,6 +76,33 @@ namespace Entidades
             else
             {
                 sb.AppendLine($"Aún No ha contratado señales premium");
+            }
+            return sb.ToString();
+        }
+        /// <summary>
+        /// Da formato a la impresio de un servicio
+        /// </summary>
+        /// <param name="s"></param>
+        /// <returns>Sring builder de servicios</returns>
+        public string ToStringEServicios(EServicios s)
+        {
+            StringBuilder sb = new StringBuilder();
+            switch (this.Servivio)
+            {
+                case EServicios.NoActivo:
+                    sb.AppendLine($"SERVICIO: NO ACTIVO");
+                    break;
+                case EServicios.DTVGo:
+                    sb.AppendLine($"SERVICIO: DIREC TV GO");
+                    break;
+                case EServicios.Oro:
+                    sb.AppendLine($"SERVICIO: ORO ");
+                    break;
+                case EServicios.Plata:
+                    sb.AppendLine($"SERVICIO: PLATA ");
+                    break;
+                default:
+                    break;
             }
             return sb.ToString();
         }

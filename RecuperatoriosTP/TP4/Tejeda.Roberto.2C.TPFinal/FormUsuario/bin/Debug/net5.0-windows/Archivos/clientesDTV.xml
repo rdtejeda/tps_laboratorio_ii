@@ -6,10 +6,12 @@
     <Apellido>de Rosas</Apellido>
     <Direccion>El restaurador 290</Direccion>
     <Servicio>
-      <Servivio>NoActivo</Servivio>
+      <Servivio>DTVGo</Servivio>
       <FormaPago>TarjetaCredito</FormaPago>
       <CantidadDecos>Cero</CantidadDecos>
-      <SenialPremium />
+      <SenialPremium>
+        <ESenialesPremiun>HBO</ESenialesPremiun>
+      </SenialPremium>
     </Servicio>
   </ClienteDTV>
   <ClienteDTV>
@@ -18,10 +20,13 @@
     <Apellido>San Martin</Apellido>
     <Direccion>Cementerio Recoleta</Direccion>
     <Servicio>
-      <Servivio>NoActivo</Servivio>
+      <Servivio>Plata</Servivio>
       <FormaPago>TarjetaCredito</FormaPago>
       <CantidadDecos>Cero</CantidadDecos>
-      <SenialPremium />
+      <SenialPremium>
+        <ESenialesPremiun>Paramount</ESenialesPremiun>
+        <ESenialesPremiun>FutbolArgentino</ESenialesPremiun>
+      </SenialPremium>
     </Servicio>
   </ClienteDTV>
   <ClienteDTV>
@@ -30,22 +35,41 @@
     <Apellido>Alfonsin</Apellido>
     <Direccion>Salta 289</Direccion>
     <Servicio>
+      <Servivio>Oro</Servivio>
+      <FormaPago>TarjetaDebito</FormaPago>
+      <CantidadDecos>Uno</CantidadDecos>
+      <SenialPremium>
+        <ESenialesPremiun>Star</ESenialesPremiun>
+        <ESenialesPremiun>FutbolArgentino</ESenialesPremiun>
+      </SenialPremium>
+    </Servicio>
+  </ClienteDTV>
+  <ClienteDTV>
+    <Dni>12908345</Dni>
+    <Nombre>Cantalicio</Nombre>
+    <Apellido>Luna</Apellido>
+    <Direccion>Larralde 3987</Direccion>
+    <Servicio>
       <Servivio>NoActivo</Servivio>
       <FormaPago>TarjetaCredito</FormaPago>
       <CantidadDecos>Cero</CantidadDecos>
-      <SenialPremium />
+      <SenialPremium>
+        <ESenialesPremiun>HBO</ESenialesPremiun>
+      </SenialPremium>
     </Servicio>
   </ClienteDTV>
   <ClienteDTV>
     <Dni>18098193</Dni>
     <Nombre>Micaela</Nombre>
     <Apellido>Suarez</Apellido>
-    <Direccion>PUAN 267Mi</Direccion>
+    <Direccion>PUAN 2677</Direccion>
     <Servicio>
-      <Servivio>NoActivo</Servivio>
+      <Servivio>Plata</Servivio>
       <FormaPago>TarjetaCredito</FormaPago>
-      <CantidadDecos>Cero</CantidadDecos>
-      <SenialPremium />
+      <CantidadDecos>Dos</CantidadDecos>
+      <SenialPremium>
+        <ESenialesPremiun>Star</ESenialesPremiun>
+      </SenialPremium>
     </Servicio>
   </ClienteDTV>
   <ClienteDTV>
@@ -54,10 +78,14 @@
     <Apellido>Tejeda</Apellido>
     <Direccion>Larrea 123</Direccion>
     <Servicio>
-      <Servivio>Plata</Servivio>
-      <FormaPago>TarjetaCredito</FormaPago>
-      <CantidadDecos>Dos</CantidadDecos>
+      <Servivio>DTVGo</Servivio>
+      <FormaPago>TarjetaDebito</FormaPago>
+      <CantidadDecos>Cero</CantidadDecos>
       <SenialPremium>
+        <ESenialesPremiun>HBO</ESenialesPremiun>
+        <ESenialesPremiun>NBA</ESenialesPremiun>
+        <ESenialesPremiun>Star</ESenialesPremiun>
+        <ESenialesPremiun>Paramount</ESenialesPremiun>
         <ESenialesPremiun>FutbolArgentino</ESenialesPremiun>
       </SenialPremium>
     </Servicio>
@@ -66,13 +94,13 @@
     <Dni>24235466</Dni>
     <Nombre>Pepe</Nombre>
     <Apellido>Argento</Apellido>
-    <Direccion>Larroque 2890</Direccion>
+    <Direccion>Larroque 2892</Direccion>
     <Servicio>
       <Servivio>DTVGo</Servivio>
-      <FormaPago>TarjetaCredito</FormaPago>
+      <FormaPago>TarjetaDebito</FormaPago>
       <CantidadDecos>Cero</CantidadDecos>
       <SenialPremium>
-        <ESenialesPremiun>FutbolArgentino</ESenialesPremiun>
+        <ESenialesPremiun>Paramount</ESenialesPremiun>
       </SenialPremium>
     </Servicio>
   </ClienteDTV>
@@ -86,9 +114,36 @@
       <FormaPago>TarjetaCredito</FormaPago>
       <CantidadDecos>Cero</CantidadDecos>
       <SenialPremium>
+        <ESenialesPremiun>HBO</ESenialesPremiun>
+        <ESenialesPremiun>NBA</ESenialesPremiun>
         <ESenialesPremiun>Star</ESenialesPremiun>
         <ESenialesPremiun>Paramount</ESenialesPremiun>
+        <ESenialesPremiun>FutbolArgentino</ESenialesPremiun>
       </SenialPremium>
+    </Servicio>
+  </ClienteDTV>
+  <ClienteDTV>
+    <Dni>34789123</Dni>
+    <Nombre>Raul</Nombre>
+    <Apellido>Alacaraz</Apellido>
+    <Direccion>Perdo goyena 234</Direccion>
+    <Servicio>
+      <Servivio>NoActivo</Servivio>
+      <FormaPago>TarjetaCredito</FormaPago>
+      <CantidadDecos>Cero</CantidadDecos>
+      <SenialPremium />
+    </Servicio>
+  </ClienteDTV>
+  <ClienteDTV>
+    <Dni>34890567</Dni>
+    <Nombre>Ernesto</Nombre>
+    <Apellido>Alvarez</Apellido>
+    <Direccion>Sourigues 2879</Direccion>
+    <Servicio>
+      <Servivio>NoActivo</Servivio>
+      <FormaPago>TarjetaCredito</FormaPago>
+      <CantidadDecos>Cero</CantidadDecos>
+      <SenialPremium />
     </Servicio>
   </ClienteDTV>
   <ClienteDTV>
@@ -97,10 +152,11 @@
     <Apellido>Guzman</Apellido>
     <Direccion>Latorrre 2</Direccion>
     <Servicio>
-      <Servivio>Oro</Servivio>
+      <Servivio>Plata</Servivio>
       <FormaPago>TarjetaDebito</FormaPago>
       <CantidadDecos>Cero</CantidadDecos>
       <SenialPremium>
+        <ESenialesPremiun>HBO</ESenialesPremiun>
         <ESenialesPremiun>NBA</ESenialesPremiun>
         <ESenialesPremiun>FutbolArgentino</ESenialesPremiun>
       </SenialPremium>
@@ -138,6 +194,36 @@
     </Servicio>
   </ClienteDTV>
   <ClienteDTV>
+    <Dni>56523891</Dni>
+    <Nombre>Homero</Nombre>
+    <Apellido>Simpson</Apellido>
+    <Direccion>Fracaso 189</Direccion>
+    <Servicio>
+      <Servivio>DTVGo</Servivio>
+      <FormaPago>TarjetaCredito</FormaPago>
+      <CantidadDecos>Uno</CantidadDecos>
+      <SenialPremium>
+        <ESenialesPremiun>Paramount</ESenialesPremiun>
+      </SenialPremium>
+    </Servicio>
+  </ClienteDTV>
+  <ClienteDTV>
+    <Dni>57984345</Dni>
+    <Nombre>Lorena</Nombre>
+    <Apellido>Capurro</Apellido>
+    <Direccion>Perez 390</Direccion>
+    <Servicio>
+      <Servivio>Plata</Servivio>
+      <FormaPago>TarjetaDebito</FormaPago>
+      <CantidadDecos>Tres</CantidadDecos>
+      <SenialPremium>
+        <ESenialesPremiun>HBO</ESenialesPremiun>
+        <ESenialesPremiun>NBA</ESenialesPremiun>
+        <ESenialesPremiun>FutbolArgentino</ESenialesPremiun>
+      </SenialPremium>
+    </Servicio>
+  </ClienteDTV>
+  <ClienteDTV>
     <Dni>67356734</Dni>
     <Nombre>Eva</Nombre>
     <Apellido>Peron</Apellido>
@@ -146,7 +232,9 @@
       <Servivio>NoActivo</Servivio>
       <FormaPago>TarjetaCredito</FormaPago>
       <CantidadDecos>Cero</CantidadDecos>
-      <SenialPremium />
+      <SenialPremium>
+        <ESenialesPremiun>HBO</ESenialesPremiun>
+      </SenialPremium>
     </Servicio>
   </ClienteDTV>
   <ClienteDTV>
@@ -181,10 +269,14 @@
     <Apellido>Cabral</Apellido>
     <Direccion>Larrea 12</Direccion>
     <Servicio>
-      <Servivio>NoActivo</Servivio>
+      <Servivio>Plata</Servivio>
       <FormaPago>TarjetaCredito</FormaPago>
       <CantidadDecos>Cero</CantidadDecos>
-      <SenialPremium />
+      <SenialPremium>
+        <ESenialesPremiun>HBO</ESenialesPremiun>
+        <ESenialesPremiun>Star</ESenialesPremiun>
+        <ESenialesPremiun>FutbolArgentino</ESenialesPremiun>
+      </SenialPremium>
     </Servicio>
   </ClienteDTV>
   <ClienteDTV>
@@ -197,6 +289,34 @@
       <FormaPago>TarjetaCredito</FormaPago>
       <CantidadDecos>Cero</CantidadDecos>
       <SenialPremium />
+    </Servicio>
+  </ClienteDTV>
+  <ClienteDTV>
+    <Dni>99239468</Dni>
+    <Nombre>Tutan</Nombre>
+    <Apellido>Camon</Apellido>
+    <Direccion>Egipto 234</Direccion>
+    <Servicio>
+      <Servivio>NoActivo</Servivio>
+      <FormaPago>TarjetaCredito</FormaPago>
+      <CantidadDecos>Cero</CantidadDecos>
+      <SenialPremium />
+    </Servicio>
+  </ClienteDTV>
+  <ClienteDTV>
+    <Dni>340982324</Dni>
+    <Nombre>Joaquin</Nombre>
+    <Apellido>Sabina</Apellido>
+    <Direccion>madrid 823</Direccion>
+    <Servicio>
+      <Servivio>Oro</Servivio>
+      <FormaPago>TarjetaCredito</FormaPago>
+      <CantidadDecos>Dos</CantidadDecos>
+      <SenialPremium>
+        <ESenialesPremiun>HBO</ESenialesPremiun>
+        <ESenialesPremiun>Star</ESenialesPremiun>
+        <ESenialesPremiun>Paramount</ESenialesPremiun>
+      </SenialPremium>
     </Servicio>
   </ClienteDTV>
 </ArrayOfClienteDTV>

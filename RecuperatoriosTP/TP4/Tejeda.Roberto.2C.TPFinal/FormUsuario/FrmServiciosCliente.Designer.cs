@@ -37,10 +37,10 @@
             this.lblServicio = new System.Windows.Forms.Label();
             this.lblCantidadDecos = new System.Windows.Forms.Label();
             this.lblFormaPago = new System.Windows.Forms.Label();
-            this.lblSenialPremium = new System.Windows.Forms.Label();
-            this.listBoxSeniales = new System.Windows.Forms.ListBox();
-            this.btnBajaSenila = new System.Windows.Forms.Button();
-            this.btnAltaSenila = new System.Windows.Forms.Button();
+            this.lblSenialPremiun = new System.Windows.Forms.Label();
+            this.listBoxSenPremiun = new System.Windows.Forms.ListBox();
+            this.btnBajaSePremiun = new System.Windows.Forms.Button();
+            this.btnAltaSePremiun = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnSalirActualizar = new System.Windows.Forms.Button();
             this.lblSenialesContradas = new System.Windows.Forms.Label();
@@ -143,43 +143,44 @@
             this.lblFormaPago.TabIndex = 8;
             this.lblFormaPago.Text = "Forma de Pago";
             // 
-            // lblSenialPremium
+            // lblSenialPremiun
             // 
-            this.lblSenialPremium.AutoSize = true;
-            this.lblSenialPremium.Location = new System.Drawing.Point(41, 241);
-            this.lblSenialPremium.Name = "lblSenialPremium";
-            this.lblSenialPremium.Size = new System.Drawing.Size(87, 15);
-            this.lblSenialPremium.TabIndex = 9;
-            this.lblSenialPremium.Text = "Señal Premium";
+            this.lblSenialPremiun.AutoSize = true;
+            this.lblSenialPremiun.Location = new System.Drawing.Point(41, 241);
+            this.lblSenialPremiun.Name = "lblSenialPremiun";
+            this.lblSenialPremiun.Size = new System.Drawing.Size(83, 15);
+            this.lblSenialPremiun.TabIndex = 9;
+            this.lblSenialPremiun.Text = "Señal Premiun";
             // 
-            // listBoxSeniales
+            // listBoxSenPremiun
             // 
-            this.listBoxSeniales.FormattingEnabled = true;
-            this.listBoxSeniales.ItemHeight = 15;
-            this.listBoxSeniales.Location = new System.Drawing.Point(213, 317);
-            this.listBoxSeniales.Name = "listBoxSeniales";
-            this.listBoxSeniales.Size = new System.Drawing.Size(150, 94);
-            this.listBoxSeniales.TabIndex = 10;
+            this.listBoxSenPremiun.FormattingEnabled = true;
+            this.listBoxSenPremiun.ItemHeight = 15;
+            this.listBoxSenPremiun.Location = new System.Drawing.Point(213, 317);
+            this.listBoxSenPremiun.Name = "listBoxSenPremiun";
+            this.listBoxSenPremiun.Size = new System.Drawing.Size(150, 94);
+            this.listBoxSenPremiun.TabIndex = 10;
             // 
-            // btnBajaSenila
+            // btnBajaSePremiun
             // 
-            this.btnBajaSenila.Location = new System.Drawing.Point(39, 375);
-            this.btnBajaSenila.Name = "btnBajaSenila";
-            this.btnBajaSenila.Size = new System.Drawing.Size(152, 36);
-            this.btnBajaSenila.TabIndex = 11;
-            this.btnBajaSenila.Text = "Baja Señal";
-            this.btnBajaSenila.UseVisualStyleBackColor = true;
-            this.btnBajaSenila.Click += new System.EventHandler(this.btnBajaSenila_Click);
+            this.btnBajaSePremiun.Location = new System.Drawing.Point(39, 375);
+            this.btnBajaSePremiun.Name = "btnBajaSePremiun";
+            this.btnBajaSePremiun.Size = new System.Drawing.Size(152, 36);
+            this.btnBajaSePremiun.TabIndex = 11;
+            this.btnBajaSePremiun.TabStop = false;
+            this.btnBajaSePremiun.Text = "Baja Señal Premiun";
+            this.btnBajaSePremiun.UseVisualStyleBackColor = true;
+            this.btnBajaSePremiun.Click += new System.EventHandler(this.btnBajaSenila_Click);
             // 
-            // btnAltaSenila
+            // btnAltaSePremiun
             // 
-            this.btnAltaSenila.Location = new System.Drawing.Point(41, 317);
-            this.btnAltaSenila.Name = "btnAltaSenila";
-            this.btnAltaSenila.Size = new System.Drawing.Size(152, 34);
-            this.btnAltaSenila.TabIndex = 12;
-            this.btnAltaSenila.Text = "Alta Señal";
-            this.btnAltaSenila.UseVisualStyleBackColor = true;
-            this.btnAltaSenila.Click += new System.EventHandler(this.btnAltaSenila_Click);
+            this.btnAltaSePremiun.Location = new System.Drawing.Point(41, 317);
+            this.btnAltaSePremiun.Name = "btnAltaSePremiun";
+            this.btnAltaSePremiun.Size = new System.Drawing.Size(152, 34);
+            this.btnAltaSePremiun.TabIndex = 12;
+            this.btnAltaSePremiun.Text = "Alta Señal Premiun";
+            this.btnAltaSePremiun.UseVisualStyleBackColor = true;
+            this.btnAltaSePremiun.Click += new System.EventHandler(this.btnAltaSenila_Click);
             // 
             // btnActualizar
             // 
@@ -219,7 +220,7 @@
             this.lblNumeroCliente.TabIndex = 16;
             this.lblNumeroCliente.Text = "CLIENTE N°";
             // 
-            // FormServiciosCliente
+            // FrmServiciosCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -228,10 +229,10 @@
             this.Controls.Add(this.lblSenialesContradas);
             this.Controls.Add(this.btnSalirActualizar);
             this.Controls.Add(this.btnActualizar);
-            this.Controls.Add(this.btnAltaSenila);
-            this.Controls.Add(this.btnBajaSenila);
-            this.Controls.Add(this.listBoxSeniales);
-            this.Controls.Add(this.lblSenialPremium);
+            this.Controls.Add(this.btnAltaSePremiun);
+            this.Controls.Add(this.btnBajaSePremiun);
+            this.Controls.Add(this.listBoxSenPremiun);
+            this.Controls.Add(this.lblSenialPremiun);
             this.Controls.Add(this.lblFormaPago);
             this.Controls.Add(this.lblCantidadDecos);
             this.Controls.Add(this.lblServicio);
@@ -245,7 +246,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FormServiciosCliente";
+            this.Name = "FrmServiciosCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SERVICIOS DEL CLIENTE";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormServiciosCliente_FormClosing);
@@ -266,10 +267,10 @@
         private System.Windows.Forms.Label lblServicio;
         private System.Windows.Forms.Label lblCantidadDecos;
         private System.Windows.Forms.Label lblFormaPago;
-        private System.Windows.Forms.Label lblSenialPremium;
-        private System.Windows.Forms.ListBox listBoxSeniales;
-        private System.Windows.Forms.Button btnBajaSenila;
-        private System.Windows.Forms.Button btnAltaSenila;
+        private System.Windows.Forms.Label lblSenialPremiun;
+        private System.Windows.Forms.ListBox listBoxSenPremiun;
+        private System.Windows.Forms.Button btnBajaSePremiun;
+        private System.Windows.Forms.Button btnAltaSePremiun;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnSalirActualizar;
         private System.Windows.Forms.Label lblSenialesContradas;

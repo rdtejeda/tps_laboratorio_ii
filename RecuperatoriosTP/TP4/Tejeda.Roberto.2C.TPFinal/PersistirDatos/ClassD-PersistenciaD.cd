@@ -8,17 +8,17 @@
     </TypeIdentifier>
   </Class>
   <Class Name="PersistirDatos.ManejarArchivos" BaseTypeListCollapsed="true">
-    <Position X="0.5" Y="5.25" Width="4.75" />
+    <Position X="4.75" Y="3.25" Width="4.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAABAAAAAA=</HashCode>
+      <HashCode>AAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAIAAABAAAAAA=</HashCode>
       <FileName>ManejarArchivos.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="PersistirDatos.Serializar&lt;T&gt;" BaseTypeListCollapsed="true">
-    <Position X="0.5" Y="3.25" Width="4.75" />
+    <Position X="5.5" Y="0.5" Width="4.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAEBAAAAAA=</HashCode>
+      <HashCode>AAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAIAAEBAAAAAA=</HashCode>
       <FileName>Serializar.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />

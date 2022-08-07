@@ -63,5 +63,32 @@ namespace PersistirDatos
                 throw;
             }
         }
+        /// <summary>
+        ///Agrga informacion al archivo el archivo
+        /// </summary>
+        /// <param name="path">Para construir Ruta absoluta</param>
+        /// <param name="nombreArchivo">Nombre del archivo</param>
+        /// <param name="contenido">Contenido</param>
+        /// <exception cref="ArchivoException"></exception>
+        public void Agregar(string path, string nombreArchivo, string contenido)
+        {
+            try
+            {
+                string rutaCompleta = Path.Combine(path, nombreArchivo);
+
+                using (StreamWriter streamWriter = new StreamWriter(rutaCompleta, true))
+                {
+                    streamWriter.WriteLine(contenido);
+                }
+            }
+            catch (DirectoryNotFoundException ex)
+            {
+                throw new ArchivoException("El directorio no existe", ex);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }

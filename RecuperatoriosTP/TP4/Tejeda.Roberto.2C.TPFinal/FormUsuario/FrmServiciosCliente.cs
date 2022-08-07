@@ -7,36 +7,60 @@ namespace Formularios
 {
     public partial class FrmServiciosCliente : Form
     {
-        ClienteDTV cliente;
+        ClienteDTV clienteAuxiliar;
         public FrmServiciosCliente()
         {
             InitializeComponent();
         }
-        public void TraerCliente(ClienteDTV c)
+        private void FormServiciosCliente_Load(object sender, EventArgs e)
         {
-            cliente = c;
+            this.lblNumeroCliente.Text += $"{clienteAuxiliar.Dni} - {clienteAuxiliar.Apellido} {clienteAuxiliar.Nombre}";
+        }
+        public void TraerCliente(ClienteDTV clienteValidado)
+        {
+            if (clienteValidado is not null)
+            {
+                clienteAuxiliar = clienteValidado;
+            }
         }
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            if (cliente.Servicio is not null)
+            if (clienteAuxiliar.Servicio is not null)
             {
-                this.tBxDireccion.Text = cliente.Direccion;
-                this.comboBoxCantidadDecos.Text = cliente.Servicio.CantidadDecos.ToString();
-                this.comboBoxFormaPAgo.Text = cliente.Servicio.FormaPago.ToString();
-                this.comboBoxServicio.Text = cliente.Servicio.Servivio.ToString();
-                foreach (Servicio.ESenialesPremiun item in cliente.Servicio.SenialPremium)
+                this.tBxDireccion.Text = clienteAuxiliar.Direccion;
+                this.comboBoxCantidadDecos.Text = clienteAuxiliar.Servicio.CantidadDecos.ToString();
+                this.comboBoxFormaPAgo.Text = clienteAuxiliar.Servicio.FormaPago.ToString();
+                this.comboBoxServicio.Text = clienteAuxiliar.Servicio.Servivio.ToString();
+                foreach (Servicio.ESenialesPremiun item in clienteAuxiliar.Servicio.SenialPremium)
                 {
-                    this.listBoxSeniales.Items.Add(item);
+                    if (listBoxSenPremiun.FindStringExact(item.ToString()) < 0)
+                    {
+                        this.listBoxSenPremiun.Items.Add(item);
+                    }
                 }
             }
         }
         private void btnBajaSenila_Click(object sender, EventArgs e)
         {
-            listBoxSeniales.Items.Remove(listBoxSeniales.SelectedItem);
+            if (listBoxSenPremiun.SelectedItem is not null)
+            {
+                listBoxSenPremiun.Items.Remove(listBoxSenPremiun.SelectedItem);
+            }
+            else
+            {
+                MessageBox.Show("Debe selecionar una Señal para dar la baja");
+            }
         }
         private void btnAltaSenila_Click(object sender, EventArgs e)
         {
-            listBoxSeniales.Items.Add(comboBoxSenialPremium.Text);
+            if (listBoxSenPremiun.FindStringExact(comboBoxSenialPremium.Text) < 0 && comboBoxSenialPremium.Text.Length > 0)
+            {
+                listBoxSenPremiun.Items.Add(comboBoxSenialPremium.Text);
+            }
+            else
+            {
+                MessageBox.Show("Señal ya agregada o no Selecionada");
+            }
         }
         private void btnSalirActualizar_Click(object sender, EventArgs e)
         {
@@ -47,8 +71,7 @@ namespace Formularios
                     ClienteDTV clienteAux = ActualizarServicioDelCliente();
                     ClienteDTV.ModificarServiviosCliente(clienteAux);
                     ClientesDTVDAO.Modificar(clienteAux);
-                    MessageBox.Show("Se han Actualizado los datos del cliente en base SQL y BackUp XML");
-                    Close();
+                    MessageBox.Show("Se han Actualizado los datos del clienteAuxiliar en base SQL y BackUp XML");
                 }
                 else
                 {
@@ -57,22 +80,21 @@ namespace Formularios
             }
             catch (Exception ex)
             {
+                MessageBox.Show("No se ha podido actualizar la base de datos");
                 MessageBox.Show(ex.Message);
-            }           
-        }       
-        private void FormServiciosCliente_Load(object sender, EventArgs e)
-        {
-            this.lblNumeroCliente.Text += $"{cliente.Dni} - {cliente.Apellido} {cliente.Nombre}";
+            }
+            finally
+            {
+                Close();
+            }
         }
         private ClienteDTV ActualizarServicioDelCliente()
         {
             ClienteDTV clienteAux = new ClienteDTV();
-
-            clienteAux.Dni = cliente.Dni;
-            clienteAux.Nombre = cliente.Nombre;
-            clienteAux.Apellido = cliente.Apellido;
+            clienteAux.Dni = clienteAuxiliar.Dni;
+            clienteAux.Nombre = clienteAuxiliar.Nombre;
+            clienteAux.Apellido = clienteAuxiliar.Apellido;
             clienteAux.Direccion = tBxDireccion.Text;
-
             switch (comboBoxCantidadDecos.Text)
             {
                 case "Cero":
@@ -144,24 +166,23 @@ namespace Formularios
                 default:
                     break;
             }
-            if (listBoxSeniales.Items.Count > 0)
+            if (listBoxSenPremiun.Items.Count > 0)
             {
-                if (listBoxSeniales.FindString("Paramount") >= 0)
+                if (listBoxSenPremiun.FindString("Paramount") >= 0)
                     clienteAux.Servicio.SenialPremium.Add(ESenialesPremiun.Paramount);
-                if (listBoxSeniales.FindString("FutbolArgentino") >= 0)
+                if (listBoxSenPremiun.FindString("FutbolArgentino") >= 0)
                     clienteAux.Servicio.SenialPremium.Add(ESenialesPremiun.FutbolArgentino);
-                if (listBoxSeniales.FindString("HBO") >= 0)
+                if (listBoxSenPremiun.FindString("HBO") >= 0)
                     clienteAux.Servicio.SenialPremium.Add(ESenialesPremiun.HBO);
-                if (listBoxSeniales.FindString("Star") >= 0)
+                if (listBoxSenPremiun.FindString("Star") >= 0)
                     clienteAux.Servicio.SenialPremium.Add(ESenialesPremiun.Star);
-                if (listBoxSeniales.FindString("NBA") >= 0)
+                if (listBoxSenPremiun.FindString("NBA") >= 0)
                     clienteAux.Servicio.SenialPremium.Add(ESenialesPremiun.NBA);
             }
             return clienteAux;
         }
         private void FormServiciosCliente_FormClosing(object sender, FormClosingEventArgs e)
         {
-            FrmUsuarioDTV.formValidarCliente.Show();
             this.Hide();
         }
     }

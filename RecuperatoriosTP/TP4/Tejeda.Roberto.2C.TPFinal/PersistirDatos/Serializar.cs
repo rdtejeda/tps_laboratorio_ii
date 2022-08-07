@@ -86,5 +86,41 @@ namespace PersistirDatos
             }
             return retorno;
         }
+        /// <summary>
+        /// Serializa y Guarda archivos tipo Jayso y XML
+        /// </summary>
+        /// <param name="path">Ruta absoluta</param>
+        /// <param name="nombreArchivo">NOMBRE ARCHIVO</param>
+        /// <param name="contenido">cONTENIDO</param>
+        public void Agregar(string path, string nombreArchivo, T contenido)
+        {
+            try
+            {
+                if (Path.GetExtension(nombreArchivo) == ".json")
+                {
+                    JsonSerializerOptions options = new JsonSerializerOptions();
+                    options.WriteIndented = true;
+                    string json = JsonSerializer.Serialize(contenido, options);
+                    manejarArchivos.Agregar(path, nombreArchivo, json);
+                }
+                else if (Path.GetExtension(nombreArchivo) == ".xml")
+                {
+                    string rutaCompleta = Path.Combine(path, nombreArchivo);
+                    using (StreamWriter streamWriter = new StreamWriter(rutaCompleta))
+                    {
+                        XmlSerializer serializer = new XmlSerializer(typeof(T));
+                        serializer.Serialize(streamWriter, contenido);
+                    }
+                }
+                else
+                {
+                    throw new ArchivoException("La extension del archivo es invalida");
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }

@@ -19,7 +19,7 @@ namespace PersistirDatos
             try
             {
                 string ruta;
-                ruta = Environment.CurrentDirectory + @"\Archivos\" + nombreArchivo;
+                ruta = Environment.CurrentDirectory + @"\Logs\" + nombreArchivo;
                 using (StreamWriter sw = new StreamWriter(ruta, true, Encoding.UTF8))
                 {
                     sw.WriteLine($"{DateTime.Now} {mensaje}");

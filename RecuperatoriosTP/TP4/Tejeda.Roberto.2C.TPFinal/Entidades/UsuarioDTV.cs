@@ -10,6 +10,7 @@ namespace Entidades
     {
         private string nombreUsuario;
         private string password;
+
         public UsuarioDTV()
         {
         }
@@ -44,7 +45,7 @@ namespace Entidades
             string path = null;
             try
             {
-                List<UsuarioDTV> listaUsuariosDTV = UsuarioDTVDAOs.Leer();
+                List<UsuarioDTV> listaUsuariosDTV = UsuariosDTVDAO.Leer();
                 foreach (UsuarioDTV item in listaUsuariosDTV)
                 {
                     if (item.NombreUsuario == nombreUsuario && item.Passwword == password)

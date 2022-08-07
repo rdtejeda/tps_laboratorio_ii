@@ -1,0 +1,50 @@
+{
+  "NumeroReclamo": 11,
+  "EstaSolucionado": true,
+  "DniClienteReclama": "1289456"
+}
+{
+  "NumeroReclamo": 12,
+  "EstaSolucionado": false,
+  "DniClienteReclama": "10345984"
+}
+{
+  "NumeroReclamo": 12,
+  "EstaSolucionado": true,
+  "DniClienteReclama": "10345984"
+}
+{
+  "NumeroReclamo": 13,
+  "EstaSolucionado": false,
+  "DniClienteReclama": "1289456"
+}
+{
+  "NumeroReclamo": 14,
+  "EstaSolucionado": true,
+  "DniClienteReclama": "10345984"
+}
+{
+  "NumeroReclamo": 15,
+  "EstaSolucionado": true,
+  "DniClienteReclama": "12908345"
+}
+{
+  "NumeroReclamo": 14,
+  "EstaSolucionado": false,
+  "DniClienteReclama": "10345984"
+}
+{
+  "NumeroReclamo": 4,
+  "EstaSolucionado": false,
+  "DniClienteReclama": "340982324"
+}
+{
+  "NumeroReclamo": 5,
+  "EstaSolucionado": true,
+  "DniClienteReclama": "18098193"
+}
+{
+  "NumeroReclamo": 3,
+  "EstaSolucionado": false,
+  "DniClienteReclama": "18098193"
+}

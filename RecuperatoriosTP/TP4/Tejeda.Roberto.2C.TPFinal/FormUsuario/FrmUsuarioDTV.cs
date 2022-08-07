@@ -104,5 +104,9 @@ namespace Formularios
                 this.tBxPassword.Text = string.Empty;
             }
         }
+        private void FrmUsuarioDTV_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

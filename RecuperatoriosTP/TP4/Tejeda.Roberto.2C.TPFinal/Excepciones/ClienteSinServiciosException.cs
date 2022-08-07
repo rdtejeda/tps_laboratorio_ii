@@ -8,15 +8,12 @@ namespace Excepciones
         public ClienteSinServiciosException()
         {
         }
-
         public ClienteSinServiciosException(string message) : base(message)
         {
         }
-
         public ClienteSinServiciosException(string message, Exception innerException) : base(message, innerException)
         {
         }
-
         protected ClienteSinServiciosException(SerializationInfo info, StreamingContext context) : base(info, context)
         {
         }

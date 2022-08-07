@@ -56,9 +56,9 @@ namespace Entidades
             try
             {
                 string query = "UPDATE Clientes SET Nombre = @Nombre, Apellido = @Apellido, Direccion = @Direccion, EServicio = @EServicio," +
-                " EFormaPago = @EFormaPago, ECantidadDecos = @ECantidadDecos, HBO = @HBO, NBA = @NBA, Star = @Star, Paramount = @Paramount, FutbolArgentino = @FutbolArgentino WHERE Dni = @Dni";                   
-                
-                connection.Open();                
+                " EFormaPago = @EFormaPago, ECantidadDecos = @ECantidadDecos, HBO = @HBO, NBA = @NBA, Star = @Star, Paramount = @Paramount, FutbolArgentino = @FutbolArgentino WHERE Dni = @Dni";
+
+                connection.Open();
                 command.CommandText = query;
                 command.Parameters.Clear();
                 command.Parameters.AddWithValue("Dni", int.Parse(cliente.Dni));
@@ -138,7 +138,7 @@ namespace Entidades
 
                 string query = "INSERT INTO Clientes (Dni, Nombre, Apellido, Direccion, EServicio, EFormaPago, ECantidadDecos, HBO, NBA, Star, Paramount, FutbolArgentino)" +
                     " VALUES (@Dni, @Nombre, @Apellido, @Direccion, @Eservicio, @EFormaPago, @ECantidadDecos, @HBO, @NBA, @Star, @Paramount, @FutbolArgentino)";
-                
+
                 command.CommandText = query;
                 command.Parameters.Clear();
                 command.Parameters.AddWithValue("Dni", int.Parse(cliente.Dni));
@@ -149,11 +149,11 @@ namespace Entidades
                 command.Parameters.AddWithValue("EFormaPago", "TarjetaCredito");
                 command.Parameters.AddWithValue("ECantidadDecos", 0);
                 command.Parameters.AddWithValue("HBO", false);
-                command.Parameters.AddWithValue("NBA", false); 
-                command.Parameters.AddWithValue("Star", false); 
-                command.Parameters.AddWithValue("Paramount", false); 
-                command.Parameters.AddWithValue("FutbolArgentino", false);                 
-               
+                command.Parameters.AddWithValue("NBA", false);
+                command.Parameters.AddWithValue("Star", false);
+                command.Parameters.AddWithValue("Paramount", false);
+                command.Parameters.AddWithValue("FutbolArgentino", false);
+
                 command.ExecuteNonQuery();
             }
             catch (Exception)
@@ -226,7 +226,7 @@ namespace Entidades
                             break;
                     }
                     int cantidadDecos = dataReader.GetInt32(6);
-                    
+
                     ECantidadDecos eCantidadDecos = new ECantidadDecos();
                     switch (cantidadDecos)
                     {
@@ -263,14 +263,12 @@ namespace Entidades
                     Servicio servicios = new Servicio(eServicio, eFormaPago, eCantidadDecos, listaSeniales);
                     ClienteDTV usuario = new ClienteDTV(dni, nombre, apellido, direccion, servicios);
 
-
                     lista.Add(usuario);
                 }
                 return lista;
             }
             catch (Exception)
             {
-
                 throw;
             }
             finally

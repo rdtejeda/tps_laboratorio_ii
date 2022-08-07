@@ -94,7 +94,7 @@
             // btnIngresarXML
             // 
             this.btnIngresarXML.Location = new System.Drawing.Point(129, 154);
-            this.btnIngresarXML.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnIngresarXML.Margin = new System.Windows.Forms.Padding(2);
             this.btnIngresarXML.Name = "btnIngresarXML";
             this.btnIngresarXML.Size = new System.Drawing.Size(74, 46);
             this.btnIngresarXML.TabIndex = 6;
@@ -102,7 +102,7 @@
             this.btnIngresarXML.UseVisualStyleBackColor = true;
             this.btnIngresarXML.Click += new System.EventHandler(this.btnIngresarXML_Click);
             // 
-            // FormUsuario
+            // FrmUsuarioDTV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -119,10 +119,11 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FormUsuario";
+            this.Name = "FrmUsuarioDTV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Validar Usuario Aplicación DTV";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormUsuario_FormClosing);
+            this.Load += new System.EventHandler(this.FrmUsuarioDTV_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
